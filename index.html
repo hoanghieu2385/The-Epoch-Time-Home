@@ -1,0 +1,3529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Epoch Time</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <div class="nav-bar__left">
+      <div style="display: flex;">
+        <div>
+          <button class="nav-bar__icon-btn" id="open-menu-btn" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="sidebar-nav" id="sidebar-nav">
+          <div class="sidebar-nav__overlay" id="sidebar-overlay"></div>
+
+          <div class="sidebar-nav__panel">
+            <header class="sidebar-nav__header">
+              <button class="sidebar-nav__close-button" id="close-menu-btn" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <a class="sidebar-nav__logo" href="/">
+                <img alt="The Epoch Times" src="https://www.theepochtimes.com/_next/static/media/logo.32553ed2.svg">
+              </a>
+            </header>
+
+            <form class="sidebar-nav__search-form">
+              <input class="sidebar-nav__search-input" type="search" placeholder="Search" name="search">
+              <button class="sidebar-nav__search-submit" type="submit" aria-label="Submit search">
+                <div class="sidebar-nav__search-divider"></div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <ul class="sidebar-nav__list">
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <span class="sidebar-nav__group-title">Editions</span>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Editions submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/">Home Page</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/bright/arts-culture">Arts &amp; Culture</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Arts & Culture submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/bright">Bright</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Bright submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/business/markets">Business</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Business submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/china">China News</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle China News submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/entertainment">Entertainment</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Entertainment submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/epochbuy">EpochBuy</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle EpochBuy submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/health">EpochHealth</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle EpochHealth submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/epochtv">EpochTV</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle EpochTV submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/epochfun">Games</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Games submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/latest">Latest Articles</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/bright/radiant-life">Lifestyle</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Lifestyle submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/opinion">Opinion</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Opinion submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/podcasts">Podcasts</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/premium">Premium</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/focus/recipes">Recipes</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Recipes submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/science">Science</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Science submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/shenyun">Special Coverage</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/how-the-specter-of-communism-is-ruling-our-world">Special Series</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/sports">Sports</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Sports submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/tech">Tech</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle Tech submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="/top-news">Top News</a>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/us">US</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle US submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <div class="sidebar-nav__group">
+                  <a class="sidebar-nav__group-title" href="/world">World</a>
+                  <button class="sidebar-nav__toggle" aria-label="Toggle World submenu">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="sidebar-nav__item">
+                <hr class="sidebar-nav__divider">
+                <ul class="sidebar-nav__footer-list">
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Help Center</a></li>
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Subscribe</a></li>
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Newsletters</a></li>
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Newsstands</a></li>
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Epoch Shop</a></li>
+                  <li class="sidebar-nav__footer-item"><a class="sidebar-nav__footer-link" href="#">Gift</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div>
+          <button class="nav-bar__icon-btn" id="open-search-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="search-overlay" id="search-overlay">
+          <div class="search-overlay__container">
+            <button class="search-overlay__close-button" id="close-search-btn" aria-label="Close search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="search-overlay__title">What are you looking for?</h2>
+            <form class="search-overlay__form">
+              <div class="search-overlay__input-wrapper">
+                <input class="search-overlay__input" type="search" placeholder="Search" aria-label="Search input">
+                <div class="search-overlay__divider"></div>
+                <button class="search-overlay__submit-button" type="submit" aria-label="Submit search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="nav-bar__item">
+          <button class="nav-bar__editions-toggle" onclick="toggleEditionsMenu()">
+            Editions
+            <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <div class="nav-bar__editions-menu" id="editions-menu">
+            <a href="#" class="nav-bar__editions-link">UNITED STATES</a>
+            <a href="#" class="nav-bar__editions-link">CANADA</a>
+            <a href="#" class="nav-bar__editions-link">AUSTRALIA</a>
+            <a href="#" class="nav-bar__editions-link">UK, EUROPE</a>
+            <hr class="nav-bar__editions-divider">
+            <a href="#" class="nav-bar__editions-link">BULGARIAN</a>
+            <a href="#" class="nav-bar__editions-link">CHINESE</a>
+            <a href="#" class="nav-bar__editions-link">CZECH</a>
+            <a href="#" class="nav-bar__editions-link">DUTCH</a>
+            <a href="#" class="nav-bar__editions-link">ENGLISH</a>
+            <a href="#" class="nav-bar__editions-link">FRENCH</a>
+            <a href="#" class="nav-bar__editions-link">BULGARIAN</a>
+            <a href="#" class="nav-bar__editions-link">CHINESE</a>
+            <a href="#" class="nav-bar__editions-link">CZECH</a>
+            <a href="#" class="nav-bar__editions-link">DUTCH</a>
+            <a href="#" class="nav-bar__editions-link">ENGLISH</a>
+            <a href="#" class="nav-bar__editions-link">FRENCH</a>
+            <a href="#" class="nav-bar__editions-link">GERMAN</a>
+            <a href="#" class="nav-bar__editions-link">GREEK</a>
+            <a href="#" class="nav-bar__editions-link">INDONESIAN</a>
+            <a href="#" class="nav-bar__editions-link">ITALIAN</a>
+            <a href="#" class="nav-bar__editions-link">JAPANESE</a>
+            <a href="#" class="nav-bar__editions-link">KOREAN</a>
+            <a href="#" class="nav-bar__editions-link">PERSIAN</a>
+            <a href="#" class="nav-bar__editions-link">POLISH</a>
+            <a href="#" class="nav-bar__editions-link">PORTUGUESE</a>
+            <a href="#" class="nav-bar__editions-link">ROMANIAN</a>
+            <a href="#" class="nav-bar__editions-link">RUSSIAN</a>
+            <a href="#" class="nav-bar__editions-link">SLOVAK</a>
+            <a href="#" class="nav-bar__editions-link">SPANISH</a>
+            <a href="#" class="nav-bar__editions-link">SWEDISH</a>
+            <a href="#" class="nav-bar__editions-link">TURKISH</a>
+            <a href="#" class="nav-bar__editions-link">UKRAINIAN</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-bar__center">
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          US
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">US</div>
+              <p class="nav-bar__dropdown-description">
+                National news coverage by our reporters in New York, Washington, and throughout the United States.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">US</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">States</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          World
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">World</div>
+              <p class="nav-bar__dropdown-description">
+                The most pressing global issues shaping the world today, spanning Europe, Asia, Africa, the Middle
+                East,
+                and the Americas.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">World</a></li>
+                <li><a href="#">China</a></li>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Business
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Business</div>
+              <p class="nav-bar__dropdown-description">
+                The latest news and analysis on the economy, job market, real estate, and global markets.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Markets</a></li>
+                <li><a href="#">Tech & Innovation</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          EpochHealth
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">EpochHealth</div>
+              <p class="nav-bar__dropdown-description">
+                Get the latest health news, in-depth features, and expert insights to make wise choices for mind,
+                body,and soul.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">EpochHealth</a></li>
+                <li><a href="#">Wellness</a></li>
+                <li><a href="#">Nutrition</a></li>
+                <li><a href="#">Fitness</a></li>
+                <li><a href="#">Mental Health</a></li>
+                <li><a href="#">COVID-19</a></li>
+                <li><a href="#">Integrative Health</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Bright
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Bright</div>
+              <p class="nav-bar__dropdown-description">
+                An inspiring curation of all that’s best in the world of art and culture.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Bright</a></li>
+                <li><a href="#">Arts & Culture</a></li>
+                <li><a href="#">Family & Education</a></li>
+                <li><a href="#">American Essence</a></li>
+                <li><a href="#">Personal Finance</a></li>
+                <li><a href="#">Leadership</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Lifestyle
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Lifestyle</div>
+              <p class="nav-bar__dropdown-description">
+                Your guide to leisure and entertainment, from great recipes and lifestyle tips to fabulous
+                destinations.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Sports</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Games
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Games</div>
+              <p class="nav-bar__dropdown-description">
+                Exercising your brain with new puzzles and games added daily.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Sudoku</a></li>
+                <li><a href="#">Spot the Difference</a></li>
+                <li><a href="#">Blossom Word Game</a></li>
+                <li><a href="#">Word Search Central</a></li>
+                <li><a href="#">Sweet Shuffle</a></li>
+                <li><a href="#">Today’s Hurdle</a></li>
+                <li><a href="#">Mahjong Dimensions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Opinion
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Opinion</div>
+              <p class="nav-bar__dropdown-description">
+                Expert opinion, rigorous arguments, and profound insights—grounded in principled discourse and the
+                timeless pursuit of wisdom.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Editorials</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Opinion
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Opinion</div>
+              <p class="nav-bar__dropdown-description">
+                Expert opinion, rigorous arguments, and profound insights—grounded in principled discourse and the
+                timeless pursuit of wisdom.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Editorials</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">Entertainment</a>
+      </div>
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">Podcast</a>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          EpochTV
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">EpochTV</div>
+              <p class="nav-bar__dropdown-description">
+                Stay informed with our news video platform, delivering breaking stories and in-depth analysis.
+              </p>
+            </div>
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">EpochTV</a></li>
+                <li><a href="#">Talk Shows</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Documentaries</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-bar__right">
+      <button id="login-btn" class="login-template-btn light-btn">
+        LOG IN
+      </button>
+      <button id="signup-btn" class="login-template-btn light-btn">
+        FREE ACCOUNT
+      </button>
+      <button class="login-template-btn dark-btn">
+        SUBSCRIBE
+      </button>
+    </div>
+  </nav>
+
+  <header class="header home-main">
+    <div class="header__left">
+      <div class="header__date">Friday, September 12, 2025</div>
+      <div class="header__download">
+        <strong><a href="#">Download e-Newspaper</a></strong>
+      </div>
+    </div>
+
+    <div class="header__center">
+      <a href="#">
+        <img
+          src="https://www.theepochtimes.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEET_Header_Logo_1.34911b3e.png&w=3840&q=75"
+          alt="">
+      </a>
+    </div>
+
+    <div class="header__right">
+      <div class="header__membership">Subscription & Members</div>
+      <div class="header__donate"><strong><a href="#">Donate</a></strong></div>
+    </div>
+  </header>
+
+  <div class="page home-main">
+    <main class="content">
+      <article class="story-card">
+        <div class="story-card__content">
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">Trump Says He Is Designating Antifa as Terrorist Organization</h3>
+          </a>
+          <p class="story-card__excerpt">Anyone funding the group should be investigated, the president said.</p>
+
+          <div class="story-card__meta">
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>3 Min</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-comment"></i>
+              <span>641</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-share-from-square"></i>
+              <span>489</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="story-card__media">
+          <a href="#" class="story-card__link">
+            <img class="story-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/17/id5916470-GettyImages-2235360665-Donald-Trump-OP.jpg"
+              alt="Donald Trump">
+          </a>
+        </div>
+      </article>
+
+      <hr class="content__divider">
+
+      <section class="stories-section">
+        <article class="featured-story">
+          <div class="featured-story__content">
+            <a href="#" class="featured-story__link">
+              <h3 class="featured-story__title">ABC Suspends Jimmy Kimmel: 5 Things to Know</h3>
+            </a>
+            <p class="featured-story__excerpt">A number of Hollywood celebrities have since commented on the matter.</p>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+          <div class="featured-story__image-container">
+            <a href="#">
+              <img class="featured-story__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/18/id5916757-Jimmy-Kimmel-GettyImages-2213138256.jpg"
+                alt="Jimmy Kimmel">
+            </a>
+          </div>
+        </article>
+
+        <hr class="stories-section__divider">
+
+        <div class="story-grid">
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/13/id5914538-Erika-Kirk-1080x720.jpg"
+                alt="Erika Kirk">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">What to Know About Erika Kirk, Widow of Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/05/22/id5862240-GettyImages-1192127005KO-1080x720.jpg"
+                alt="FCC Building">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">House Panel Rejects Bid to Subpoena FCC Chair...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/16/id5915883-GettyImages-2234173488-1.jpg"
+                alt="Vigil for Charlie Kirk">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">LIVE NOW: Turning Point Hosts Vigil for Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <hr class="content__divider">
+
+      <article class="story-card">
+        <div class="story-card__content">
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">Trump Signs Order Declaring Antifa a Domestic Terrorist Organization</h3>
+          </a>
+          <p class="story-card__excerpt">The president called the loosely organized group a “militarist, anarchist
+            enterprise” opposed to the U.S. government and
+            law.</p>
+
+          <div class="story-card__meta">
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>6 Min</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-comment"></i>
+              <span>223</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-share-from-square"></i>
+              <span>199</span>
+            </a>
+          </div>
+
+          <div class="border-dashed">
+          </div>
+
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">Netherlands, Hungary Push to Designate Antifa as Terrorist Organization</h3>
+          </a>
+
+        </div>
+
+        <div class="story-card__media">
+          <a href="#" class="story-card__link">
+            <img class="story-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F22%2Fid5918875-Trump-GettyImages-2236814593.jpg&w=1200&q=75"
+              alt="Donald Trump">
+          </a>
+        </div>
+      </article>
+
+      <section class="premium-section">
+        <header class="premium-section__header">
+          <hr class="premium-section__divider">
+          <div class="premium-section__title-wrapper">
+            <a href="#" class="premium-section__title-link">PREMIUM</a>
+          </div>
+        </header>
+
+        <article class="featured-article">
+          <div class="featured-article__content">
+            <span class="article-tag">In-Depth</span>
+            <a href="#" class="featured-article__link">
+              <h3 class="featured-article__title">Health Officials Warn of Link Between Tylenol and Autism–What to Know
+              </h3>
+            </a>
+            <p class="featured-article__excerpt">RFK Jr. and other health leaders are warning against routine use of
+              acetaminophen and say an existing drug can be used to treat autism.</p>
+            <div class="story-card__meta">
+              <a href="#" class="story-card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>8 Min</span>
+              </a>
+              <a href="#" class="story-card__meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="14" height="14">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                  </path>
+                </svg>
+                <span>49</span>
+              </a>
+              <a href="#" class="story-card__meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span>151</span>
+              </a>
+            </div>
+          </div>
+          <div class="featured-article__image-container">
+            <a href="#">
+              <img class="featured-article__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/23/id5918954-GettyImages-2236805240.jpg"
+                alt="Tylenol bottle">
+            </a>
+          </div>
+        </article>
+
+        <hr class="content__divider">
+
+        <div class="article-list__container">
+          <div class="article-list">
+            <article class="article-card article-card--horizontal">
+              <a href="#" class="article-card__image-link">
+                <img class="article-card__image"
+                  src="https://img.theepochtimes.com/assets/uploads/2025/09/22/id5918441-1122-1080x720.jpg"
+                  alt="US and China flags">
+              </a>
+              <div class="article-card__content">
+                <span class="article-tag">In-Depth</span>
+                <a href="#" class="article-card__link">
+                  <h3 class="article-card__title">The Cold War-Like Contest Between the US and China</h3>
+                </a>
+              </div>
+            </article>
+            <article class="article-card article-card--horizontal">
+              <a href="#" class="article-card__image-link">
+                <img class="article-card__image"
+                  src="https://img.theepochtimes.com/assets/uploads/2025/09/21/id5918242-3-2-1080x720.jpg"
+                  alt="Alcatraz prison">
+              </a>
+              <div class="article-card__content">
+                <span class="article-tag">In-Depth</span>
+                <a href="#" class="article-card__link">
+                  <h3 class="article-card__title">America’s Most Iconic Prison Could Soon Take Inmates Again</h3>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="article-list__navigation">
+            <button class="article-list__button article-list__button--prev" aria-label="Scroll to the previous item"
+              disabled>&lt;</button>
+            <button class="article-list__button article-list__button--next"
+              aria-label="Scroll to the next item">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <hr class="content__divider">
+
+      <article class="story-card">
+        <div class="story-card__content">
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">White House Rebuts Reports Alleging Tom Homan Took Bribes From Undercover FBI
+              Agents</h3>
+          </a>
+          <p class="story-card__excerpt">The White House said an investigation launched during the Biden administration
+            yielded no evidence of illegal activity
+            or criminal wrongdoing.</p>
+
+          <div class="story-card__meta">
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>3 Min</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-comment"></i>
+              <span>29</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-share-from-square"></i>
+              <span>6</span>
+            </a>
+          </div>
+
+          <div class="border-dashed">
+          </div>
+
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">Nearly 25,000 Missing Illegal Immigrant Children Have Been Found: Tom Homan
+            </h3>
+          </a>
+
+        </div>
+
+        <div class="story-card__media">
+          <a href="#" class="story-card__link">
+            <img class="story-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F06%2F30%2Fid5880550-06302025-DSC04179-Tom-Homan.jpg&w=1200&q=75"
+              alt="Donald Trump">
+          </a>
+        </div>
+      </article>
+
+      <hr class="content__divider">
+
+      <section class="stories-section">
+        <article class="featured-story">
+          <div class="featured-story__content">
+            <a href="#" class="featured-story__link">
+              <h3 class="featured-story__title">Remembering Charlie Kirk: NTD Live Special Coverage</h3>
+            </a>
+            <p class="featured-story__excerpt">Steve Lance and Tiffany Meier host NTD’s live special coverage of Turning
+              Point USA’s memorial service for the late
+              Charlie Kirk.</p>
+          </div>
+          <div class="featured-story__image-container">
+            <a href="#">
+              <img class="featured-story__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/18/id5916757-Jimmy-Kimmel-GettyImages-2213138256.jpg"
+                alt="Jimmy Kimmel">
+            </a>
+          </div>
+        </article>
+
+        <hr class="stories-section__divider">
+
+        <div class="story-grid">
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/13/id5914538-Erika-Kirk-1080x720.jpg"
+                alt="Erika Kirk">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">What to Know About Erika Kirk, Widow of Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/05/22/id5862240-GettyImages-1192127005KO-1080x720.jpg"
+                alt="FCC Building">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">House Panel Rejects Bid to Subpoena FCC Chair...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/16/id5915883-GettyImages-2234173488-1.jpg"
+                alt="Vigil for Charlie Kirk">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">LIVE NOW: Turning Point Hosts Vigil for Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <hr class="content__divider">
+
+      <article class="story-card">
+        <div class="story-card__content">
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">What to Know About FCC Chair Brendan Carr</h3>
+          </a>
+          <p class="story-card__excerpt">A longtime conservative telecommunications lawyer, Carr has ignited debate over
+            the brief suspension of talk show host
+            Jimmy Kimmel.</p>
+
+          <div class="story-card__meta">
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>8 Min</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-comment"></i>
+              <span>7</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-share-from-square"></i>
+              <span>6</span>
+            </a>
+          </div>
+
+          <div class="border-dashed">
+          </div>
+
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">ABC’s ‘The View’ in Spotlight After Jimmy Kimmel Suspended, Says FCC Chairman
+            </h3>
+          </a>
+
+        </div>
+
+        <div class="story-card__media">
+          <a href="#" class="story-card__link">
+            <img class="story-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F06%2F20%2Fid5876247-Brendan-Carr.jpg&w=1200&q=75">
+          </a>
+        </div>
+      </article>
+
+      <hr class="content__divider">
+
+      <article class="story-card">
+        <div class="story-card__content">
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">NASA Announces New ‘All-American’ Astronaut Candidate Class</h3>
+          </a>
+          <p class="story-card__excerpt">Ten men and women were chosen out of approximately 8,000 applicants.
+            Jimmy Kimmel.</p>
+
+          <div class="story-card__meta">
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>8 Min</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-comment"></i>
+              <span>17</span>
+            </a>
+            <a href="#" class="story-card__meta-item">
+              <i class="fa-regular fa-share-from-square"></i>
+              <span>3</span>
+            </a>
+          </div>
+
+          <div class="border-dashed">
+          </div>
+
+          <a href="#" class="story-card__link">
+            <h3 class="story-card__title">NASA Bans Chinese Nationals From Working on Agency Programs
+            </h3>
+          </a>
+
+        </div>
+
+        <div class="story-card__media">
+          <a href="#" class="story-card__link">
+            <img class="story-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F22%2Fid5918821-NASAastroclass1.jpg&w=1200&q=75">
+          </a>
+        </div>
+      </article>
+
+      <hr class="content__divider">
+
+      <section class="stories-section">
+        <article class="featured-story">
+          <div class="featured-story__content">
+            <a href="#" class="featured-story__link">
+              <h3 class="featured-story__title">Ohio Artist Honors Charlie Kirk With Barnside Mural</h3>
+            </a>
+            <p class="featured-story__excerpt">Days after the conservative commentator’s assassination, Erica Arndts
+              transformed a barn into a tribute to him.</p>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">7 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">40</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">85</span>
+              </a>
+            </div>
+
+            <div class="border-dashed"></div>
+
+            <a href="#" class="featured-story__link">
+              <h3 class="featured-story__title">Charlie Kirk Memorial Shows Beginning of New Movement</h3>
+            </a>
+          </div>
+          <div class="featured-story__image-container">
+            <a href="#">
+              <img class="featured-story__image"
+                src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F22%2Fid5918753-erica10.jpg&w=1200&q=75">
+            </a>
+          </div>
+        </article>
+
+        <hr class="stories-section__divider">
+
+        <div class="story-grid">
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F22%2Fid5918753-erica10.jpg&w=1200&q=75">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">What to Know About Erika Kirk, Widow of Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/05/22/id5862240-GettyImages-1192127005KO-1080x720.jpg"
+                alt="FCC Building">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">House Panel Rejects Bid to Subpoena FCC Chair...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#" class="story-card__image-link">
+              <img class="story-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/16/id5915883-GettyImages-2234173488-1.jpg"
+                alt="Vigil for Charlie Kirk">
+            </a>
+            <div class="story-card__content">
+              <a href="#" class="story-card__link">
+                <h3 class="story-card__title">LIVE NOW: Turning Point Hosts Vigil for Charlie Kirk...</h3>
+              </a>
+              <div class="featured-story__meta">
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="meta-item__text">6 Min</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg class="meta-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" width="14" height="14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z">
+                    </path>
+                  </svg>
+                  <span class="meta-item__text">143</span>
+                </a>
+                <a href="#" class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="meta-item__text">35</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+    </main>
+
+    <div class="page__divider"></div>
+
+    <!-- Aside -->
+    <aside class="page__sidebar">
+      <div class="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">NTD Television 24/7</h3>
+                  </a>
+                  <p class="slide-content__description">News based on facts. Watch on NTD.com/live</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder" style="background-color: #eee;"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">NTD Evening News Full Broadcast (Sept. 18)</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder" style="background-color: #ddd;"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">Trump Files $15 Billion Lawsuit Against NYT; Luigi Mangione Has 2
+                      Charges Dropped by Judge | Facts</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder" style="background-color: #eee;"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">As California’s Inmate Population Drops, the Question Arises: Are
+                      the Prisons Needed?</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder" style="background-color: #eee;"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">Trump, Starmer Discuss Gaza, Ukraine And U.S.-U.K. Tech Deal; Mayor
+                      Bowser, DC Leaders Testify on Crime Policies</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="slide-content">
+                <div class="slide-content__media">
+                  <div class="media-placeholder" style="background-color: #eee;"></div>
+                </div>
+                <div class="slide-content__text">
+                  <a href="#">
+                    <h3 class="slide-content__title">Cut Alzheimer’s Risk Through Nature, Language-Learning, Love, and
+                      Trust
+                      An ‘Alzheimer’s cure’ may still be far off. What basic and</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel__navigation">
+          <button class="carousel__button carousel__button--prev" aria-label="Slide trước">&lt;</button>
+          <div class="carousel__nav">
+          </div>
+          <button class="carousel__button carousel__button--next" aria-label="Slide tiếp theo">&gt;</button>
+        </div>
+      </div>
+
+      <section class="latest-news">
+        <header class="latest-news__header">
+          <hr class="latest-news__divider">
+          <a href="/latest" class="latest-news__title-link">LATEST NEWS</a>
+        </header>
+
+        <ul class="latest-news__list">
+          <li class="latest-news__item">
+            <div class="latest-news__item-header">
+              <time class="latest-news__timestamp" datetime="2025-09-24">40 mins</time>
+            </div>
+            <a href="..." class="latest-news__link">
+              <h3 class="latest-news__headline">North Carolina Legislature Passes Bill Spurred by Fatal Knife Attack on
+                Ukrainian Refugee</h3>
+            </a>
+          </li>
+
+          <li class="latest-news__item">
+            <div class="latest-news__item-header">
+              <time class="latest-news__timestamp" datetime="2025-09-24">1 hour</time>
+              <img class="latest-news__icon" alt="Video icon"
+                src="https://www.theepochtimes.com/_next/static/media/video-camera-20x20.7b349312.svg">
+            </div>
+            <a href="..." class="latest-news__link">
+              <h3 class="latest-news__headline">NTD Good Morning Full Broadcast (Sept. 24)</h3>
+            </a>
+          </li>
+
+          <li class="latest-news__item">
+            <div class="latest-news__item-header">
+              <time class="latest-news__timestamp" datetime="2025-09-24">1 hour</time>
+            </div>
+            <a href="..." class="latest-news__link">
+              <h3 class="latest-news__headline">Fixer-Upper Homes Offer Better Deals, Especially in South and Midwest:
+                Report
+              </h3>
+            </a>
+          </li>
+
+          <li class="latest-news__item">
+            <div class="latest-news__item-header">
+              <time class="latest-news__timestamp" datetime="2025-09-24">2 hours</time>
+            </div>
+            <a href="..." class="latest-news__link">
+              <h3 class="latest-news__headline">A Year After Hurricane Helene, Recovery Is Slow but Community Tight</h3>
+            </a>
+          </li>
+
+          <li class="latest-news__item">
+            <div class="latest-news__item-header">
+              <time class="latest-news__timestamp" datetime="2025-09-24">2 hours</time>
+            </div>
+            <a href="..." class="latest-news__link">
+              <h3 class="latest-news__headline">Researchers Warn: AI Is Becoming an Expert in Deception</h3>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="wellness-section">
+        <header class="wellness-section__header">
+          <hr class="wellness-section__divider">
+          <a href="/health/life-wellness" class="wellness-section__title-link">WELLNESS</a>
+        </header>
+
+        <div class="wellness-section__list">
+
+          <article class="featured-card">
+            <a href="..." class="featured-card__image-link">
+              <img class="featured-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/19/id5917587-Hair-loss8_featured-image-1080x720.jpg"
+                alt="6 Common Hair Routine Mistakes to Avoid">
+            </a>
+            <div class="featured-card__content">
+              <a href="..." class="featured-card__link">
+                <h3 class="featured-card__title">6 Common Hair Routine Mistakes to Avoid</h3>
+              </a>
+              <p class="featured-card__excerpt">Hair is healthiest when the cuticle is intact and the scales are tightly
+                sealed. An incorrect hair care routine can damage the cuticle and break the hair.</p>
+              <div class="article-meta">
+                <a href="#"><i class="fa-regular fa-clock"></i>11 Min</a>
+                <a href="#"><i class="fa-regular fa-comment"></i>32 Comments</a>
+                <a href="#"><i class="fa-regular fa-share-from-square"></i>691 Shares</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <a href="..." class="featured-card__image-link">
+              <img class="featured-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/19/id5917484-feature.png"
+                alt="‘Something to Look Forward To’: It’s Exactly That">
+            </a>
+            <div class="featured-card__content">
+              <a href="..." class="featured-card__link">
+                <h3 class="featured-card__title">‘Something to Look Forward To’: It’s Exactly That</h3>
+              </a>
+              <p class="featured-card__excerpt">Author Fannie Flagg offers us 30 short stories that hilariously and
+                touchingly
+                explore how our lives can unfold in unexpected ways.</p>
+              <div class="article-meta">
+                <a href="#"><i class="fa-regular fa-clock"></i>5 Min</a>
+                <a href="#"><i class="fa-regular fa-comment"></i>3 Comments</a>
+                <a href="#"><i class="fa-regular fa-share-from-square"></i>21 Shares</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="featured-podcast">
+        <header class="featured-podcast__header">
+          <hr class="featured-podcast__divider">
+          <div class="featured-podcast__header-content">
+            <a href="/podcasts" class="featured-podcast__title-link">PODCASTS</a>
+            <a href="#" class="featured-podcast__more-link">
+              <span>More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="featured-podcast__card">
+          <a href="..." class="featured-podcast__image-link">
+            <img class="featured-podcast__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/24/id5919549-TN-MorningBrief-Sep24-700x700.jpg"
+              alt="7 Takeaways From Trump’s United Nations Speech">
+          </a>
+          <div class="featured-podcast__label">
+            <a href="#">Featured</a>
+          </div>
+          <div class="featured-podcast__content">
+            <a href="..." class="featured-podcast__link">
+              <h3 class="featured-podcast__title">🎧 7 Takeaways From Trump’s United Nations Speech</h3>
+            </a>
+          </div>
+          <div class="featured-podcast__audio-info">
+            <a href="#" class="featured-podcast__audio-button">
+              <i class="fa-solid fa-headphones"></i>
+            </a>
+            <span class="featured-podcast__audio-duration">23m 44s</span>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="author-articles">
+        <hr class="author-articles__top-divider">
+
+        <div class="author-articles__container">
+          <header class="author-articles__header">
+            <h2 class="author-articles__title">Articles by Falun Gong Founder</h2>
+            <p class="author-articles__author-name">Mr. Li Hongzhi</p>
+          </header>
+
+          <hr class="author-articles__divider">
+
+          <div class="author-articles__list">
+            <div class="author-articles__item">
+              <a href="..." class="author-articles__link">
+                <h3 class="author-articles__headline">‘Why This World Is a Realm of Unknowing’</h3>
+              </a>
+              <time class="author-articles__date" datetime="2024-10-01">10/1/2024</time>
+            </div>
+
+            <div class="author-articles__item">
+              <a href="..." class="author-articles__link">
+                <h3 class="author-articles__headline author-articles__headline--light">‘Wake Up’</h3>
+              </a>
+              <time class="author-articles__date" datetime="2024-06-08">6/8/2024</time>
+            </div>
+
+            <div class="author-articles__item">
+              <a href="..." class="author-articles__link">
+                <h3 class="author-articles__headline author-articles__headline--light">‘The Ordeals Our Spiritual
+                  Discipline
+                  Faces’</h3>
+              </a>
+              <time class="author-articles__date" datetime="2024-06-05">6/5/2024</time>
+            </div>
+
+          </div>
+
+          <hr class="author-articles__divider">
+
+          <footer class="author-articles__footer">
+            <a href="..." class="author-articles__more-link">Read More</a>
+          </footer>
+        </div>
+      </section>
+
+      <section class="opinion-section">
+        <header class="opinion-section__header">
+          <hr class="opinion-section__divider">
+          <div class="opinion-section__title-wrapper">
+            <a href="/#" class="opinion-section__title-link">OPINION</a>
+          </div>
+        </header>
+
+        <div class="opinion-section__list">
+
+          <article class="author-post">
+            <a href="#" class="author-post__avatar-link">
+              <img class="author-post__avatar-image"
+                src="https://img.theepochtimes.com/assets/uploads/2023/02/20/SusanHarris_WEB.jpg" alt="Susan D. Harris">
+            </a>
+            <div class="author-post__content">
+              <p class="author-post__author">By <a href="#" class="author-post__author-link">Susan D. Harris</a></p>
+              <a href="#" class="author-post__link">
+                <h3 class="author-post__title">Why Churches Must Confront the Kirk Assassination: Binding the Wounded
+                  Body
+                </h3>
+              </a>
+              <time class="author-post__date" datetime="2025-09-24">9/24/2025</time>
+            </div>
+          </article>
+
+          <article class="author-post">
+            <a href="#" class="author-post__avatar-link">
+              <img class="author-post__avatar-image"
+                src="https://img.theepochtimes.com/assets/uploads/2022/07/19/WEB_JeffreyATucker.jpg"
+                alt="Jeffrey A. Tucker">
+            </a>
+            <div class="author-post__content">
+              <p class="author-post__author">By <a href="#" class="author-post__author-link">Jeffrey A. Tucker</a></p>
+              <a href="#" class="author-post__link">
+                <h3 class="author-post__title">This Is How Science Works</h3>
+              </a>
+              <time class="author-post__date" datetime="2025-09-24">9/24/2025</time>
+            </div>
+          </article>
+
+          <article class="author-post">
+            <a href="#" class="author-post__avatar-link">
+              <img class="author-post__avatar-image"
+                src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F03%2F14%2Fid5825946-MollieEngelhart_WEB.jpg&w=640&q=75"
+                alt="Susan D. Harris">
+            </a>
+            <div class="author-post__content">
+              <p class="author-post__author">By <a href="#" class="author-post__author-link">Mollie Engelhart</a></p>
+              <a href="#" class="author-post__link">
+                <h3 class="author-post__title">How Soybeans Became America’s Weak Spot
+                </h3>
+              </a>
+              <time class="author-post__date" datetime="2025-09-24">9/24/2025</time>
+            </div>
+          </article>
+
+          <article class="author-post">
+            <a href="#" class="author-post__avatar-link">
+              <img class="author-post__avatar-image"
+                src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2022%2F03%2F22%2FWEB_KarenGough.jpg&w=640&q=75"
+                alt="Susan D. Harris">
+            </a>
+            <div class="author-post__content">
+              <p class="author-post__author">By <a href="#" class="author-post__author-link">Karen Gough</a></p>
+              <a href="#" class="author-post__link">
+                <h3 class="author-post__title">Hear the Nightbird Call
+                </h3>
+              </a>
+              <time class="author-post__date" datetime="2025-09-24">9/24/2025</time>
+            </div>
+          </article>
+
+          <article class="author-post">
+            <a href="#" class="author-post__avatar-link">
+              <img class="author-post__avatar-image"
+                src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2020%2F01%2F06%2FConrad-Black.jpg&w=640&q=75"
+                alt="Susan D. Harris">
+            </a>
+            <div class="author-post__content">
+              <p class="author-post__author">By <a href="#" class="author-post__author-link">Conrad Black</a></p>
+              <a href="#" class="author-post__link">
+                <h3 class="author-post__title">Conrad Black: Federal Action Against Antifa Is Long Overdue
+                </h3>
+              </a>
+              <time class="author-post__date" datetime="2025-09-24">9/24/2025</time>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="lifestyle-section">
+        <header class="lifestyle-section__header">
+          <hr class="lifestyle-section__divider">
+          <div class="lifestyle-section__header-content">
+            <a href="#" class="lifestyle-section__title-link">LIFESTYLE</a>
+          </div>
+        </header>
+
+        <div class="lifestyle-section__grid">
+          <article class="lifestyle-card">
+            <a href="#" class="lifestyle-card__image-link">
+              <img class="lifestyle-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/08/06/id5897397-1-1080x720.jpg"
+                alt="Mark Helprin’s Wisdom">
+            </a>
+            <p class="lifestyle-card__author">
+              <a href="#" class="lifestyle-card__author-link">Jeff Minick</a>
+            </p>
+            <a href="#" class="lifestyle-card__link">
+              <h3 class="lifestyle-card__title">Mark Helprin’s Wisdom From a Lifetime of Adventure and Writing</h3>
+            </a>
+          </article>
+
+          <article class="lifestyle-card">
+            <a href="#" class="lifestyle-card__image-link">
+              <img class="lifestyle-card__image"
+                src="https://img.theepochtimes.com/assets/uploads/2025/09/19/id5917264-Ellen_Axson_Wilson_Prospect_Gate-1080x720.jpg"
+                alt="A Literary Look at Autumn">
+            </a>
+            <p class="lifestyle-card__author">
+              <a href="#" class="lifestyle-card__author-link">Jeff Minick</a>
+            </p>
+            <a href="#" class="lifestyle-card__link">
+              <h3 class="lifestyle-card__title">The Painted-Leaf Season: A Literary Look at Autumn</h3>
+            </a>
+          </article>
+
+        </div>
+
+        <a href="#" class="lifestyle-section__footer-link">
+          <span>READ MORE</span>
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </section>
+    </aside>
+
+
+  </div>
+
+  <!-- FOOD -->
+  <section class="food-section block-group">
+    <header class="food-section__header">
+      <div class="food-section__title-wrapper">
+        <a href="#" class="food-section__title-link">FOOD</a>
+      </div>
+    </header>
+
+    <div class="article-carousel">
+      <div class="article-carousel__track" data-carousel-track>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/23/id5919029-FOOD-SOURDOUGH-LA-copy-1080x720.jpeg"
+              alt="Purple Sourdough bread">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Head to Orange County, California, for the Best Sourdough in the
+                Universe.
+                And It’s Purple</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/23/id5918949-entree-simple-20250922-1080x720.jpeg"
+              alt="Vegetable Pearl Couscous">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Vegetable Pearl Couscous Is an Adaptable Side Dish</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/22/id5918442-israeli-couscous-salad-hero-03-2-1536x1097-1-1080x720.jpeg"
+              alt="Israeli Couscous Salad">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Israeli Couscous Salad With Dried Fruit</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/16/id5915609-entree-beef-20250915-1080x720.jpeg"
+              alt="One-pan dinner">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Too Tired to Cook? Make This Impossibly Flavorful One-Pan Dinner</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="article-card">
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/22/id5918442-israeli-couscous-salad-hero-03-2-1536x1097-1-1080x720.jpeg"
+              alt="Israeli Couscous Salad">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Israeli Couscous Salad With Dried Fruit</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="article-carousel__navigation">
+        <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
+          disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCASTS -->
+  <section class="podcasts-section block-group">
+    <header class="podcasts-section__header">
+      <hr class="page__divider">
+      <div class="podcasts-section__title-wrapper">
+        <a href="#" class="podcasts-section__title-link">PODCASTS</a>
+      </div>
+    </header>
+
+    <div class="podcast-carousel">
+      <div class="podcast-carousel__track" data-carousel-track>
+
+        <article class="podcast-card" data-carousel-card>
+          <div class="podcast-card__content">
+            <p class="podcast-card__author">By Jan Jekielek</p>
+            <a href="#" class="podcast-card__link">
+              <h3 class="podcast-card__title">Kyle Bass: China’s Economic Spiral and the Coming Taiwan War</h3>
+            </a>
+            <time class="podcast-card__date">6/26/2025</time>
+          </div>
+          <a href="#" class="podcast-card__artwork-link">
+            <img class="podcast-card__artwork"
+              src="https://img.theepochtimes.com/assets/uploads/2025/04/18/id5844036-AmericanThoughtLeaders.png"
+              alt="American Thought Leaders">
+          </a>
+        </article>
+
+        <article class="podcast-card" data-carousel-card>
+          <div class="podcast-card__content">
+            <p class="podcast-card__author">By Nathan Worcester</p>
+            <a href="#" class="podcast-card__link">
+              <h3 class="podcast-card__title">Patel’s Heated Testimony Over Charlie Kirk Assassination; How ‘Utah...
+              </h3>
+            </a>
+            <time class="podcast-card__date">9/19/2025</time>
+          </div>
+          <a href="#" class="podcast-card__artwork-link">
+            <img class="podcast-card__artwork"
+              src="https://img.theepochtimes.com/assets/uploads/2025/04/29/id5849798-ET_Podcast_CoverArt_ConstitutionAve.jpg"
+              alt="Constitution Ave">
+          </a>
+        </article>
+
+        <article class="podcast-card" data-carousel-card>
+          <div class="podcast-card__content">
+            <p class="podcast-card__author">By Terri Wu</p>
+            <a href="#" class="podcast-card__link">
+              <h3 class="podcast-card__title">The Woman Cloaked in White—How a Regime Drives Its Citizens to...</h3>
+            </a>
+            <time class="podcast-card__date">9/16/2025</time>
+          </div>
+          <a href="#" class="podcast-card__artwork-link">
+            <img class="podcast-card__artwork"
+              src="https://img.theepochtimes.com/assets/uploads/2025/04/29/id5849799-ET_Podcast_CoverArt_ChinaWatch.jpg"
+              alt="China Watch">
+          </a>
+        </article>
+
+        <article class="podcast-card" data-carousel-card>
+          <div class="podcast-card__content">
+            <p class="podcast-card__author">By Keegan Billings</p>
+            <a href="#" class="podcast-card__link">
+              <h3 class="podcast-card__title">🎧 Tylenot Warning, Antifa Order, California Mask Law</h3>
+            </a>
+            <time class="podcast-card__date">9/23/2025</time>
+          </div>
+          <a href="#" class="podcast-card__artwork-link">
+            <img class="podcast-card__artwork"
+              src="https://img.theepochtimes.com/assets/uploads/2025/05/27/id5864174-ET_Podcast_MorningBrief-v3.jpg"
+              alt="Morning Brief">
+          </a>
+        </article>
+
+        <article class="podcast-card" data-carousel-card>
+          <div class="podcast-card__content">
+            <p class="podcast-card__author">By Nathan Worcester</p>
+            <a href="#" class="podcast-card__link">
+              <h3 class="podcast-card__title">Patel’s Heated Testimony Over Charlie Kirk Assassination; How ‘Utah...
+              </h3>
+            </a>
+            <time class="podcast-card__date">9/19/2025</time>
+          </div>
+          <a href="#" class="podcast-card__artwork-link">
+            <img class="podcast-card__artwork"
+              src="https://img.theepochtimes.com/assets/uploads/2025/04/29/id5849798-ET_Podcast_CoverArt_ConstitutionAve.jpg"
+              alt="Constitution Ave">
+          </a>
+        </article>
+
+      </div>
+      <div class="podcast-carousel__navigation">
+        <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
+          disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- WELLNESS -->
+  <section class="wellness-section block-group">
+    <header class="wellness-section__header">
+      <div class="wellness-section__title-wrapper">
+        <a href="#" class="wellness-section__title-link">WELLNESS</a>
+      </div>
+    </header>
+
+    <div class="article-carousel">
+      <div class="article-carousel__track" data-carousel-track>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/18/id5916857-toilet-paper-1080x720.jpg"
+              alt="TCM Approaches to Address Different Types of Diarrhea">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">TCM Approaches to Address Different Types of Diarrhea</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/08/22/id5904728-exhausted-runner-1080x720.jpg"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/20/id5917834-leg-cramps2-1080x720.jpg"
+              alt="Muscle Cramps: 2 Simple Fixes">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Muscle Cramps: 2 Simple Fixes and Herbal Teas That May Help</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/13/id5914598-sun-cream-1080x720.jpg"
+              alt="When Anti-Aging Products Speed Up Skin Aging">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Anti-Aging Products Speed Up Skin Aging</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/08/22/id5904728-exhausted-runner-1080x720.jpg"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="article-carousel__navigation">
+        <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
+          disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section class="games-section block-group">
+    <header class="games-section__header">
+      <div class="games-section__title-wrapper">
+        <a href="#" class="games-section__title-link">GAMES</a>
+      </div>
+    </header>
+
+    <div class="article-carousel">
+      <div class="article-carousel__track" data-carousel-track>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2024%2F03%2F22%2Fid5829581-Spot-the-Difference-3-21-25.png&w=1200&q=75"
+              alt="TCM Approaches to Address Different Types of Diarrhea">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">TCM Approaches to Address Different Types of Diarrhea</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2021%2F10%2F23%2FFreecell-Solitaire-Cover-1-1080x720.jpg&w=1200&q=75"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2021%2F09%2F23%2Fwordwipe_1280x720-1080x720.jpg&w=1200&q=75"
+              alt="Muscle Cramps: 2 Simple Fixes">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Muscle Cramps: 2 Simple Fixes and Herbal Teas That May Help</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2022%2F03%2F11%2Fdailyhiddenobjectv2-1080x720.png&w=1200&q=75"
+              alt="When Anti-Aging Products Speed Up Skin Aging">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Anti-Aging Products Speed Up Skin Aging</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/08/22/id5904728-exhausted-runner-1080x720.jpg"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="article-carousel__navigation">
+        <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
+          disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category cuoi trang -->
+  <section class="category-grid block-group">
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">US NEWS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/09/id5912770-Iryna-Zarutska-sb-1080x720.jpg"
+              alt="Ukrainian Refugee">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">North Carolina Legislature Passes Bill Spurred by Fatal Knife Attack on
+                Ukrainian Refugee</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link">Fixer-Upper Homes Offer Better Deals, Especially in South and
+              Midwest:
+              Report</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link">Former Tennessee House Speaker Sentenced to 3 Years in Prison in
+              Legislative Mail Scheme</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">US POLITICS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/05/id5855077-3.download-1080x720.jpg"
+              alt="First Lady">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">First Lady Launches Global Coalition for Children, ‘Fostering the Future
+                Together’</h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link">Trump Hosts Multilateral Meeting</a>
+          </li>
+          <li class="post-list__item"><a href="#" class="post-list__link">US Designates Barrio 18 as Foreign
+              Terrorist Organization...</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">WORLD</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/09/18/id5916815-20250918151666216974-original-1080x720.jpg"
+              alt="Australian Prime Minister">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">What Will It Take for Australia to Achieve Its New 2035 Climate Target
+              </h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link">Republican Lawmakers Warn Canada of
+              Potential ‘Punitive Measures’...</a></li>
+          <li class="post-list__item"><a href="#" class="post-list__link">Trump Agrees NATO Should Shoot Down
+              Russian Aircraft That Enters Airspace</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+  </section>
+
+  <section class="category-grid block-group">
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">US NEWS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2021%2F09%2F11%2Fresolution-copper-facility-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">North Carolina Legislature Passes Bill Spurred by Fatal Knife Attack on
+                Ukrainian Refugee</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link">Fixer-Upper Homes Offer Better Deals, Especially in South and
+              Midwest:
+              Report</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link">Former Tennessee House Speaker Sentenced to 3 Years in Prison in
+              Legislative Mail Scheme</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">US POLITICS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F23%2Fid5919394-GettyImages-2236753647-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">First Lady Launches Global Coalition for Children, ‘Fostering the Future
+                Together’</h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link">Trump Hosts Multilateral Meeting</a>
+          </li>
+          <li class="post-list__item"><a href="#" class="post-list__link">US Designates Barrio 18 as Foreign
+              Terrorist Organization...</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">WORLD</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F23%2Fid5919369-GettyImages-911245674.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link">
+              <h3 class="featured-post__title">What Will It Take for Australia to Achieve Its New 2035 Climate Target
+              </h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link">Republican Lawmakers Warn Canada of
+              Potential ‘Punitive Measures’...</a></li>
+          <li class="post-list__item"><a href="#" class="post-list__link">Trump Agrees NATO Should Shoot Down
+              Russian Aircraft That Enters Airspace</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+  </section>
+
+  <section class="games-section block-group">
+    <header class="games-section__header">
+      <div class="games-section__title-wrapper">
+        <a href="#" class="games-section__title-link">GAMES</a>
+      </div>
+    </header>
+
+    <div class="article-carousel">
+      <div class="article-carousel__track" data-carousel-track>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2024%2F03%2F22%2Fid5829581-Spot-the-Difference-3-21-25.png&w=1200&q=75"
+              alt="TCM Approaches to Address Different Types of Diarrhea">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">TCM Approaches to Address Different Types of Diarrhea</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2021%2F10%2F23%2FFreecell-Solitaire-Cover-1-1080x720.jpg&w=1200&q=75"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2021%2F09%2F23%2Fwordwipe_1280x720-1080x720.jpg&w=1200&q=75"
+              alt="Muscle Cramps: 2 Simple Fixes">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">Muscle Cramps: 2 Simple Fixes and Herbal Teas That May Help</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2022%2F03%2F11%2Fdailyhiddenobjectv2-1080x720.png&w=1200&q=75"
+              alt="When Anti-Aging Products Speed Up Skin Aging">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Anti-Aging Products Speed Up Skin Aging</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card" data-carousel-card>
+          <a href="#" class="article-card__image-link">
+            <img class="article-card__image"
+              src="https://img.theepochtimes.com/assets/uploads/2025/08/22/id5904728-exhausted-runner-1080x720.jpg"
+              alt="When Exercise Becomes Harmful">
+          </a>
+          <div class="article-card__content">
+            <a href="#" class="article-card__link">
+              <h3 class="article-card__title">When Exercise Becomes Harmful: The Smarter Way to Exercise</h3>
+            </a>
+            <div class="featured-story__meta">
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="meta-item__text">6 Min</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-comment"></i>
+                <span class="meta-item__text">143</span>
+              </a>
+              <a href="#" class="meta-item">
+                <i class="fa-regular fa-share-from-square"></i>
+                <span class="meta-item__text">35</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="article-carousel__navigation">
+        <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
+          disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-grid-4 block-group">
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">HEALTH NEWS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F23%2Fid5919216-trump-on-vaccines-and-autism-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">Trump Calls for Spacing Out Vaccines: ‘No Downside’</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">Study Links Sugary Drinks to Colorectal Cancer Spreading
+              Elsewhere in the Body</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">TGA Says Paracetamol Safe for Pregnancy, Rejects Trump
+              Administration’s Autism Link</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">HEALTH VIEWPOINTS</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F14%2Fid5914788-protein-foods-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">Could Cutting One Amino Acid Extend Life?</h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">How Frozen Staples Can Preserve
+              Nutrition and Cut Waste</a>
+          </li>
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">5 Swinging and Pendulum Exercises
+              to Maximize Whole Body Movement</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">NUTRITION</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F18%2Fid5916887-VS_9-BRAIN-RESCUE-TIPS_TN-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">9 Ways to Tune-up the Clockwork Brain
+              </h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">5 Ways to Boost Fertility in a
+              World of Declining Birth Rates</a></li>
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">Constipation Could Signal a Deeper
+              Bodily Imbalance–Natural Self-Care Strategies
+            </a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">HEALTH RESEARCH & DISCOVERIES</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2023%2F03%2F29%2Fid5158149-shutterstock_1071065351-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">High-THC Cannabis Products Linked to Immediate Psychosis and
+                Addiction</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">A Brief Mindset Intervention Reduces Depression and
+              Inflammation</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">All You Need to Know About Chagas, the ‘Kissing Bug’ Disease
+              Recently Labeled Endemic</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+  </section>
+
+  <section class="category-grid-4 block-group">
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">FOOD</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F23%2Fid5919019-shutterstock_2510059367-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">Wine—An Appellation Primer</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">Head to Orange County, California, for the Best Sourdough in
+              the Universe. And It’s Purple</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">Vegetable Pearl Couscous Is an Adaptable Side Dish</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">HOME</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F24%2Fid5919465-living-space-launder-20250923-1080x720.jpeg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">7 Things Everyone Forgets to Launder</h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">Make a Gravel Path</a>
+          </li>
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">How to Kill Dust Mites Inside Your
+              Home—Without Breaking the Bank</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">PEOPLE</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F19%2Fid5917489-9_Delores-Hart-king-creole_-1080x720.jpg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">Dolores Hart: The Actress Who Gave Up Fame for Faith
+              </h3>
+            </a>
+          </div>
+        </article>
+        <ul class="post-list">
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">The Movement That Teaches Kids to
+              Learn From History’s Greats Instead of Cancelling Them</a></li>
+          <li class="post-list__item"><a href="#" class="post-list__link font-light">Finding the Meaning of Freedom in
+              Half an Egg: Political Prisoner’s Reflections After 1,000 Days Behind Chinese Bars</a></li>
+        </ul>
+      </div>
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link"><span>READ MORE</span><i class="fa-solid fa-chevron-right"></i></a>
+      </footer>
+    </div>
+
+    <div class="category-column">
+      <header class="category-column__header">
+        <a href="#" class="category-column__title">TRAVEL</a>
+        <div class="category-column__title-accent"></div>
+      </header>
+
+      <div class="category-column__body">
+        <article class="featured-post">
+          <a href="#" class="featured-post__image-link">
+            <img class="featured-post__image"
+              src="https://www.theepochtimes.com/_next/image?url=https%3A%2F%2Fimg.theepochtimes.com%2Fassets%2Fuploads%2F2025%2F09%2F24%2Fid5919450-steves-luzern-20250923-1080x720.jpeg&w=1200&q=75">
+          </a>
+          <div class="featured-post__content">
+            <a href="#" class="featured-post__link font-light">
+              <h3 class="featured-post__title font-light">North Carolina Legislature Passes Bill Spurred by Fatal Knife
+                Attack on
+                Ukrainian Refugee</h3>
+            </a>
+          </div>
+        </article>
+
+        <ul class="post-list">
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">Fixer-Upper Homes Offer Better Deals, Especially in South and
+              Midwest:
+              Report</a>
+          </li>
+          <li class="post-list__item">
+            <a href="#" class="post-list__link font-light">Former Tennessee House Speaker Sentenced to 3 Years in Prison
+              in
+              Legislative Mail Scheme</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="category-column__footer">
+        <a href="#" class="read-more-link">
+          <span>READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="site-footer__container">
+
+      <div class="site-footer__header">
+        <a class="site-footer__logo" href="/">
+          <img alt="The Epoch Times" src="https://www.theepochtimes.com/_next/static/media/logo.32553ed2.svg">
+        </a>
+        <div class="site-footer__actions">
+          <a class="site-footer__action-button" href="#">Help Center</a>
+          <a class="site-footer__action-button" href="#">Subscribe</a>
+          <a class="site-footer__action-button" href="#">Newsletter</a>
+          <a class="site-footer__action-button" href="#">News Stands</a>
+          <a class="site-footer__action-button" href="#">Epoch Shop</a>
+          <a class="site-footer__action-button" href="#">Gift</a>
+        </div>
+      </div>
+
+      <nav class="site-footer__main-nav">
+        <a href="#" class="site-footer__main-nav-item">Top News</a>
+        <a href="#" class="site-footer__main-nav-item">Special Series</a>
+        <a href="#" class="site-footer__main-nav-item">Special Coverage</a>
+        <a href="#" class="site-footer__main-nav-item">Latest Articles</a>
+      </nav>
+
+      <div class="site-footer__main-content">
+
+        <div class="site-footer__left-panel">
+          <div class="site-footer__column">
+            <div class="site-footer__subscribe-box">
+              <a href="#"><img
+                  src="https://www.theepochtimes.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsubscribe-footerbutton.fe000190.jpg&w=384&q=75"
+                  alt="Subscribe now"></a>
+            </div>
+            <div class="site-footer__info-links">
+              <div class="site-footer__info-links-group">
+                <a href="#">Contact Us</a>
+                <a href="#">Media Statements</a>
+                <a href="#">About Us</a>
+                <a href="#">RSS Feeds</a>
+                <a href="#">Terms of Services</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+              <div class="site-footer__info-links-group">
+                <a href="#">Corrections</a>
+                <a href="#">Copyright Policy</a>
+                <a href="#">Data Disclaimer</a>
+                <a href="#">Our Story</a>
+                <a href="#">Digital Newspaper</a>
+                <a href="#">Careers</a>
+              </div>
+            </div>
+            <a href="#" class="site-footer__donation-button">MAKE A DONATION</a>
+          </div>
+
+          <div class="site-footer__column">
+            <div class="site-footer__language-section">
+              <h3 class="site-footer__heading">36 Countries, 23 Languages</h3>
+              <div class="site-footer__language-list">
+                <ul>
+                  <li><a href="#">Bulgarian</a></li>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Chinese</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Japanese</a></li>
+                  <li><a href="#">Korean</a></li>
+                  <li><a href="#">Indonesian</a></li>
+                  <li><a href="#">French</a></li>
+                  <li><a href="#">Greek</a></li>
+                  <li><a href="#">Italian</a></li>
+                  <li><a href="#">Portuguese</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">Dutch</a></li>
+                  <li><a href="#">Russian</a></li>
+                  <li><a href="#">Ukrainian</a></li>
+                  <li><a href="#">Romanian</a></li>
+                  <li><a href="#">Czech</a></li>
+                  <li><a href="#">Slovak</a></li>
+                  <li><a href="#">Polish</a></li>
+                  <li><a href="#">Turkish</a></li>
+                  <li><a href="#">Persian</a></li>
+                  <li><a href="#">German</a></li>
+                  <li><a href="#">Swedish</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="site-footer__app-download">
+              <h3 class="site-footer__heading">Download Our App</h3>
+              <div class="site-footer__app-buttons">
+                <a href="#"><img
+                    src="https://www.theepochtimes.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload_app_store.c8c86335.png&w=384&q=75"
+                    alt="Download on the App Store"></a>
+                <a href="#"><img
+                    src="https://www.theepochtimes.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fget_google_play.af96528d.png&w=384&q=75"
+                    alt="Get it on Google Play"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__right-panel">
+          <div class="site-footer__column site-footer__column--category">
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">US</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">Politics</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Economy</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Crime</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">States</a></li>
+              </ul>
+            </div>
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">China News</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">US-China Relations</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Chinese Regime</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Business & Economy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-footer__column site-footer__column--category">
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">Business</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">Markets</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Tech & Innovation</a></li>
+              </ul>
+            </div>
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">Opinion</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">Editorials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-footer__column site-footer__column--category">
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">Arts & Culture</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">Fine Arts & Craftsmanship</a>
+                </li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Performing Arts</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Books</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-footer__column site-footer__column--category">
+            <div class="category-group">
+              <h3 class="category-group__title"><a href="#">Lifestyle</a></h3>
+              <ul class="category-group__list">
+                <li class="category-group__item"><a href="#" class="category-group__link">Life</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Food</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Travel</a></li>
+                <li class="category-group__item"><a href="#" class="category-group__link">Science</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">Copyright © 2000 - 2025 The Epoch Times Association Inc. All Rights Reserved.
+        </p>
+        <button class="site-footer__cookie-button">Cookies Settings</button>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MENU
+    document.addEventListener('DOMContentLoaded', function () {
+      const openMenuBtn = document.getElementById('open-menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const sidebarNav = document.getElementById('sidebar-nav');
+      const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+      if (openMenuBtn && closeMenuBtn && sidebarNav && sidebarOverlay) {
+
+        const openSidebar = () => {
+          sidebarNav.classList.add('sidebar-nav--open');
+          document.body.classList.add('no-scroll');
+        };
+
+        const closeSidebar = () => {
+          sidebarNav.classList.remove('sidebar-nav--open');
+          document.body.classList.remove('no-scroll');
+        };
+
+        openMenuBtn.addEventListener('click', openSidebar);
+        closeMenuBtn.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar); // Đóng khi nhấn vào nền mờ
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && sidebarNav.classList.contains('sidebar-nav--open')) {
+            closeSidebar();
+          }
+        });
+      }
+    });
+
+    // SEARCH
+    document.addEventListener('DOMContentLoaded', function () {
+      const openSearchBtn = document.getElementById('open-search-btn');
+      const closeSearchBtn = document.getElementById('close-search-btn');
+      const searchOverlay = document.getElementById('search-overlay');
+
+      // Kiểm tra xem các phần tử có tồn tại không
+      if (openSearchBtn && closeSearchBtn && searchOverlay) {
+
+        // Hàm để mở overlay
+        const openOverlay = () => {
+          searchOverlay.classList.add('search-overlay--visible');
+          document.body.classList.add('no-scroll'); // Ngăn cuộn trang
+        };
+
+        // Hàm để đóng overlay
+        const closeOverlay = () => {
+          searchOverlay.classList.remove('search-overlay--visible');
+          document.body.classList.remove('no-scroll'); // Cho phép cuộn trang lại
+        };
+
+        // Gán sự kiện click cho các nút
+        openSearchBtn.addEventListener('click', openOverlay);
+        closeSearchBtn.addEventListener('click', closeOverlay);
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && searchOverlay.classList.contains('search-overlay--visible')) {
+            closeOverlay();
+          }
+        });
+      }
+    });
+
+    // Editions Menu
+    function toggleEditionsMenu() {
+      var menu = document.getElementById("editions-menu");
+      menu.classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.nav-bar__editions-toggle')) {
+        var dropdowns = document.getElementsByClassName("nav-bar__editions-menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    // 
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel__track');
+      const slides = Array.from(track.children);
+      const nextButton = document.querySelector('.carousel__button--next');
+      const prevButton = document.querySelector('.carousel__button--prev');
+      const dotsNav = document.querySelector('.carousel__nav');
+
+      // Lấy chiều rộng của một slide
+      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      // Sắp xếp các slide nằm cạnh nhau
+      const setSlidePosition = (slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+      };
+      slides.forEach(setSlidePosition);
+
+      // Tạo các dấu chấm điều hướng
+      slides.forEach((slide, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel__dot');
+        if (index === 0) {
+          dot.classList.add('carousel__dot--active');
+        }
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.children);
+
+      // Di chuyển đến slide
+      const moveToSlide = (currentSlide, targetSlide) => {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('carousel__slide--active');
+        targetSlide.classList.add('carousel__slide--active');
+      };
+
+      // Hàm cập nhật trạng thái của các nút và dấu chấm
+      const updateControls = (targetIndex) => {
+        // Cập nhật nút prev/next
+        if (targetIndex === 0) {
+          prevButton.disabled = true;
+          nextButton.disabled = false;
+        } else if (targetIndex === slides.length - 1) {
+          prevButton.disabled = false;
+          nextButton.disabled = true;
+        } else {
+          prevButton.disabled = false;
+          nextButton.disabled = false;
+        }
+
+        // Cập nhật dấu chấm
+        const currentDot = dotsNav.querySelector('.carousel__dot--active');
+        const targetDot = dots[targetIndex];
+        if (currentDot) {
+          currentDot.classList.remove('carousel__dot--active');
+        }
+        targetDot.classList.add('carousel__dot--active');
+      };
+
+      // Xử lý khi nhấn nút "Next"
+      nextButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
+        const currentIndex = slides.findIndex(slide => slide === currentSlide);
+        const nextIndex = currentIndex + 1;
+
+        if (nextIndex < slides.length) {
+          moveToSlide(currentSlide, slides[nextIndex]);
+          updateControls(nextIndex);
+        }
+      });
+
+      // Xử lý khi nhấn nút "Previous"
+      prevButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
+        const currentIndex = slides.findIndex(slide => slide === currentSlide);
+        const prevIndex = currentIndex - 1;
+
+        if (prevIndex >= 0) {
+          moveToSlide(currentSlide, slides[prevIndex]);
+          updateControls(prevIndex);
+        }
+      });
+
+      // Xử lý khi nhấn vào một dấu chấm
+      dotsNav.addEventListener('click', e => {
+        const targetDot = e.target.closest('button.carousel__dot');
+        if (!targetDot) return;
+
+        const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
+        const targetIndex = dots.findIndex(dot => dot === targetDot);
+        const targetSlide = slides[targetIndex];
+
+        moveToSlide(currentSlide, targetSlide);
+        updateControls(targetIndex);
+      });
+
+      // Khởi tạo trạng thái ban đầu
+      updateControls(0);
+      slides[0].classList.add('carousel__slide--active');
+    });
+
+
+    // Block group
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const initializeCarousel = (carouselSelector) => {
+        const carouselContainer = document.querySelector(carouselSelector);
+        // Nếu không tìm thấy container thì thoát để tránh lỗi
+        if (!carouselContainer) {
+          console.warn(`Carousel container not found: ${carouselSelector}`);
+          return;
+        }
+
+        // Tìm các phần tử con bên trong container đó
+        const track = carouselContainer.querySelector('[data-carousel-track]');
+        const prevButton = carouselContainer.querySelector('[data-carousel-prev]');
+        const nextButton = carouselContainer.querySelector('[data-carousel-next]');
+        const cards = track.querySelectorAll('[data-carousel-card]');
+
+        if (!track || !prevButton || !nextButton || cards.length === 0) {
+          console.warn(`Carousel components missing in: ${carouselSelector}`);
+          return;
+        }
+
+        const updateButtons = () => {
+          const scrollLeft = track.scrollLeft;
+          const maxScrollLeft = track.scrollWidth - track.clientWidth;
+
+          prevButton.disabled = scrollLeft <= 0;
+          nextButton.disabled = scrollLeft >= maxScrollLeft - 1;
+        };
+
+        nextButton.addEventListener('click', () => {
+          const card = cards[0];
+          const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+          const scrollAmount = card.offsetWidth + gap;
+          track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevButton.addEventListener('click', () => {
+          const card = cards[0];
+          const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+          const scrollAmount = card.offsetWidth + gap;
+          track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        track.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
+        updateButtons(); // Cập nhật lần đầu
+      };
+
+      // ---GỌI HÀM CHO TỪNG CAROUSEL ---
+
+      initializeCarousel('.food-section');
+
+      initializeCarousel('.podcasts-section');
+
+      initializeCarousel('.wellness-section')
+
+      initializeCarousel('.games-section')
+
+
+    });
+
+
+  </script>
+</body>
+
+</html>
