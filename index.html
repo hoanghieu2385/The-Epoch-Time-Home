@@ -1146,7 +1146,8 @@
 
       <a class="tip-banner" href="#" target="_blank">
         <strong class="tip-banner__strong-text">Got a News Tip?</strong>
-        <span class="tip-banner__text">The Epoch Times offers several secure and confidential ways to send tips.<i class="fa-solid fa-chevron-right"></i></span>
+        <span class="tip-banner__text">The Epoch Times offers several secure and confidential ways to send tips.<i
+            class="fa-solid fa-chevron-right"></i></span>
       </a>
 
       <hr class="content__divider_bold">
@@ -1634,12 +1635,10 @@
               <div class="featured-story__meta">
                 <a href="#" class="meta-item">
                   <i class="fa-regular fa-clock"></i>
-
                   <span class="meta-item__text">6 Min</span>
                 </a>
                 <a href="#" class="meta-item">
                   <i class="fa-regular fa-comment"></i>
-
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
@@ -1744,10 +1743,16 @@
         </div>
 
         <div class="carousel__navigation">
-          <button class="carousel__button carousel__button--prev" aria-label="Slide trước">&lt;</button>
+          <button class="carousel__button carousel__button--prev" aria-label="Slide trước">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
           <div class="carousel__nav">
           </div>
-          <button class="carousel__button carousel__button--next" aria-label="Slide tiếp theo">&gt;</button>
+
+          <button class="carousel__button carousel__button--next" aria-label="Slide tiếp theo">
+            <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
       </div>
 
@@ -1755,7 +1760,16 @@
       <section class="latest-news">
         <header class="latest-news__header">
           <hr class="latest-news__divider">
-          <a href="/latest" class="latest-news__title-link">LATEST NEWS</a>
+          <div class="latest-news__title-container">
+            <a href="/latest" class="latest-news__title-link">LATEST NEWS</a>
+            <a href="/latest" class="latest-news__read-more-link">
+              READ MORE
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+              </svg>
+            </a>
+          </div>
         </header>
 
         <ul class="latest-news__list">
@@ -1833,7 +1847,7 @@
               <p class="featured-card__excerpt">Hair is healthiest when the cuticle is intact and the scales are tightly
                 sealed. An incorrect hair care routine can damage the cuticle and break the hair.</p>
               <div class="article-meta">
-                <a href="#"><i class="fa-regular fa-clock"></i>11</a>
+                <a href="#"><i class="fa-regular fa-clock"></i>11 Min</a>
                 <a href="#"><i class="fa-regular fa-comment"></i>32</a>
                 <a href="#"><i class="fa-regular fa-share-from-square"></i>691</a>
               </div>
@@ -1854,7 +1868,7 @@
                 touchingly
                 explore how our lives can unfold in unexpected ways.</p>
               <div class="article-meta">
-                <a href="#"><i class="fa-regular fa-clock"></i>5 </a>
+                <a href="#"><i class="fa-regular fa-clock"></i>5 Min</a>
                 <a href="#"><i class="fa-regular fa-comment"></i>3</a>
                 <a href="#"><i class="fa-regular fa-share-from-square"></i>21</a>
               </div>
@@ -2272,15 +2286,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">8 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">75</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">23</span>
               </a>
             </div>
           </div>
@@ -2299,15 +2313,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">4 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">5</span>
               </a>
             </div>
           </div>
@@ -2330,11 +2344,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">34</span>
               </a>
             </div>
           </div>
@@ -2356,11 +2370,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">23</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">2</span>
               </a>
             </div>
           </div>
@@ -2370,14 +2384,10 @@
       <div class="article-carousel__navigation">
         <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
           disabled>
-          <svg viewBox="0 0 24 24">
-            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
         </button>
         <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </button>
       </div>
     </div>
@@ -2475,14 +2485,10 @@
       <div class="podcast-carousel__navigation">
         <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
           disabled>
-          <svg viewBox="0 0 24 24">
-            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
         </button>
         <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </button>
       </div>
     </div>
@@ -2517,11 +2523,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">87</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">3</span>
               </a>
             </div>
           </div>
@@ -2540,15 +2546,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">3 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">44</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">1</span>
               </a>
             </div>
           </div>
@@ -2567,15 +2573,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">8 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">45</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">2</span>
               </a>
             </div>
           </div>
@@ -2598,11 +2604,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">86</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">27</span>
               </a>
             </div>
           </div>
@@ -2625,11 +2631,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">65</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">9</span>
               </a>
             </div>
           </div>
@@ -2640,14 +2646,10 @@
       <div class="article-carousel__navigation">
         <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
           disabled>
-          <svg viewBox="0 0 24 24">
-            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
         </button>
         <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </button>
       </div>
     </div>
@@ -2681,11 +2683,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">98</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">6</span>
               </a>
             </div>
           </div>
@@ -2708,11 +2710,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">35</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">11</span>
               </a>
             </div>
           </div>
@@ -2735,11 +2737,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">54</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">12</span>
               </a>
             </div>
           </div>
@@ -2762,11 +2764,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">74</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">3</span>
               </a>
             </div>
           </div>
@@ -2789,11 +2791,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">85</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">6</span>
               </a>
             </div>
           </div>
@@ -2804,21 +2806,17 @@
       <div class="article-carousel__navigation">
         <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
           disabled>
-          <svg viewBox="0 0 24 24">
-            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
         </button>
         <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </button>
       </div>
     </div>
   </section>
 
   <!-- Category cuoi trang -->
-  <section class="category-grid block-group">
+  <section class="category-grid block-group category-first">
 
     <div class="category-column">
       <header class="category-column__header">
@@ -2933,7 +2931,7 @@
 
     <div class="category-column">
       <header class="category-column__header">
-        <a href="#" class="category-column__title">US NEWS</a>
+        <a href="#" class="category-column__title">BUSINESS</a>
         <div class="category-column__title-accent"></div>
       </header>
 
@@ -2977,7 +2975,7 @@
 
     <div class="category-column">
       <header class="category-column__header">
-        <a href="#" class="category-column__title">US POLITICS</a>
+        <a href="#" class="category-column__title">SPORTS</a>
         <div class="category-column__title-accent"></div>
       </header>
       <div class="category-column__body">
@@ -3007,7 +3005,7 @@
 
     <div class="category-column">
       <header class="category-column__header">
-        <a href="#" class="category-column__title">WORLD</a>
+        <a href="#" class="category-column__title">ENTERTAINMENT</a>
         <div class="category-column__title-accent"></div>
       </header>
       <div class="category-column__body">
@@ -3060,15 +3058,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">2 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">43</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">23</span>
               </a>
             </div>
           </div>
@@ -3087,15 +3085,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">4 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">58</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">4</span>
               </a>
             </div>
           </div>
@@ -3118,11 +3116,11 @@
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">23</span>
               </a>
             </div>
           </div>
@@ -3141,15 +3139,15 @@
             <div class="featured-story__meta">
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-clock"></i>
-                <span class="meta-item__text">6 Min</span>
+                <span class="meta-item__text">4 Min</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-comment"></i>
-                <span class="meta-item__text">143</span>
+                <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
                 <i class="fa-regular fa-share-from-square"></i>
-                <span class="meta-item__text">35</span>
+                <span class="meta-item__text">5</span>
               </a>
             </div>
           </div>
@@ -3187,14 +3185,10 @@
       <div class="article-carousel__navigation">
         <button class="carousel-button carousel-button--prev" data-carousel-prev aria-label="Scroll to previous item"
           disabled>
-          <svg viewBox="0 0 24 24">
-            <path d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
         </button>
         <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Scroll to next item">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </button>
       </div>
     </div>
