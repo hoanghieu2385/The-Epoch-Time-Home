@@ -105,7 +105,7 @@ a {
   background-color: white;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow: visible;
 }
 
 /* --- Trạng thái KHI MỞ --- */
@@ -179,14 +179,12 @@ a {
   padding: 0;
   margin: 0;
   flex-grow: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .sidebar-nav__item {
   border-bottom: 1px solid #f0f0f0;
-}
-
-.sidebar-nav__item:hover {
-  background-color: #F4F4F4;
 }
 
 .sidebar-nav__link {
@@ -251,6 +249,61 @@ a {
   font-weight: 500;
   color: #2F2F2F;
   text-decoration: none;
+}
+
+/* Submenu trong sidebar */
+.sidebar-nav__item--has-submenu {
+  position: relative;
+}
+
+.sidebar-nav__item--has-submenu:hover {
+  background-color: #fff;
+}
+
+.sidebar-nav__item--has-submenu:hover>.sidebar-nav__group {
+  background-color: #F4F4F4;
+}
+
+.sidebar-nav__submenu {
+  position: fixed;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Khi di chuột vào item cha, hiển thị menu con */
+.sidebar-nav__item--has-submenu:hover>.sidebar-nav__submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-nav__submenu-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #2F2F2F;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  /* Ngăn chữ bị xuống dòng */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-nav__submenu-link:last-child {
+  border-bottom: none;
+}
+
+.sidebar-nav__submenu-link:hover {
+  background-color: #F4F4F4;
+}
+
+.sidebar-nav__item--has-submenu .sidebar-nav__toggle i {
+  color: #555;
 }
 
 /* SEARCH */
