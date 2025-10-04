@@ -179,10 +179,6 @@ a {
   scrollbar-width: none;
 }
 
-.sidebar-nav__item {
-  border-bottom: 1px solid #f0f0f0;
-}
-
 .sidebar-nav__link {
   display: flex;
   align-items: center;
