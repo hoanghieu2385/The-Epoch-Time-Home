@@ -2761,6 +2761,10 @@ aside.page__sidebar {
   background-color: white;
 }
 
+.site-footer .site-footer__action-button svg{
+  margin-right: 3px;
+}
+
 .site-footer__logo img {
   height: 25px;
 }
