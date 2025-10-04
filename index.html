@@ -14,10 +14,11 @@
 <body>
   <nav class="nav-bar">
     <div class="nav-bar__left">
-      <div style="display: flex;">
+      <div style="display: flex; align-items: center;">
         <div>
           <button class="nav-bar__icon-btn" id="open-menu-btn" aria-label="Open menu">
-            <i class="fa-solid fa-bars"></i>
+            <img src="https://www.theepochtimes.com/_next/static/media/menuSearch.9968d4ed.svg" alt=""
+              style="width: 20px;">
           </button>
         </div>
         <div class="sidebar-nav" id="sidebar-nav">
@@ -416,7 +417,7 @@
         <div class="nav-bar__item">
           <button class="nav-bar__editions-toggle" onclick="toggleEditionsMenu()">
             Editions
-            <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+            <i class="fas fa-play fa-rotate-90 fa-xs" style="font-size: 8px;"></i>
           </button>
           <div class="nav-bar__editions-menu" id="editions-menu">
             <a href="#" class="nav-bar__editions-link">UNITED STATES</a>
@@ -472,16 +473,54 @@
                 National news coverage by our reporters in New York, Washington, and throughout the United States.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">US</a></li>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Economy</a></li>
-                <li><a href="#">Crime</a></li>
                 <li><a href="#">States</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">California</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Education</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/morning_brief_nl-icon.jpg" alt="Morning Brief"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Morning Brief</div>
+                    <p class="newsletter-item__description">Get our top stories every morning.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/news_room_nl-icon.jpg" alt="Epoch Newsroom"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Newsroom</div>
+                    <p class="newsletter-item__description">Big stories as soon as they break.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/constitution_ave_nl-icon.jpg"
+                    alt="Constitution Ave" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Constitution Ave</div>
+                    <p class="newsletter-item__description">Get daily political updates straight from the newsroom</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -496,20 +535,58 @@
             <div class="nav-bar__dropdown-left">
               <div class="nav-bar__dropdown-heading">World</div>
               <p class="nav-bar__dropdown-description">
-                The most pressing global issues shaping the world today, spanning Europe, Asia, Africa, the Middle
-                East,
-                and the Americas.
+                The most pressing global issues shaping the world today, spanning Europe, Asia, Africa, the Middle East,
+                and
+                the Americas.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">World</a></li>
+                <li><a href="#">Middle East</a></li>
                 <li><a href="#">China</a></li>
+                <li><a href="#">Americas</a></li>
                 <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Africa</a></li>
                 <li><a href="#">Europe</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/morning_brief_nl-icon.jpg" alt="Morning Brief"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Morning Brief</div>
+                    <p class="newsletter-item__description">Get our top stories every morning.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/good_evening_nl-icon.jpg" alt="Good Evening"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Good Evening</div>
+                    <p class="newsletter-item__description">Catch the top story and unwind with lifestyle news.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/news_room_nl-icon.jpg" alt="Epoch Newsroom"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Newsroom</div>
+                    <p class="newsletter-item__description">Big stories as soon as they break.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -524,17 +601,107 @@
             <div class="nav-bar__dropdown-left">
               <div class="nav-bar__dropdown-heading">Business</div>
               <p class="nav-bar__dropdown-description">
-                The latest news and analysis on the economy, job market, real estate, and global markets.
+                The latest news and analysis on the economy, job market, real estate and global markets.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">Business</a></li>
+                <li><a href="#">Personal Finance</a></li>
                 <li><a href="#">Markets</a></li>
-                <li><a href="#">Tech & Innovation</a></li>
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Tech &amp; Innovation</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/morning_brief_nl-icon.jpg" alt="Morning Brief"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Morning Brief</div>
+                    <p class="newsletter-item__description">Get our top stories every morning.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/news_room_nl-icon.jpg" alt="Epoch Newsroom"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Newsroom</div>
+                    <p class="newsletter-item__description">Big stories as soon as they break.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://img.theepochtimes.com/assets/uploads/2025/07/22/id5891190-400x400.jpg"
+                    alt="MoneyBeat" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">MoneyBeat</div>
+                    <p class="newsletter-item__description"></p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar__item nav-bar__item--full-width">
+        <a href="#" class="nav-bar__link">
+          Opinion
+          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <div class="nav-bar__dropdown">
+          <div class="nav-bar__dropdown-content">
+            <div class="nav-bar__dropdown-left">
+              <div class="nav-bar__dropdown-heading">Opinion</div>
+              <p class="nav-bar__dropdown-description">
+                Expert opinion, rigorous arguments, and profound insights—grounded in principled discourse and the
+                timeless
+                pursuit of wisdom.
+              </p>
+            </div>
+
+            <div class="nav-bar__dropdown-right">
+              <div class="nav-bar__dropdown-title">Sections</div>
+              <ul class="nav-bar__dropdown-list">
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Editorials</a></li>
+              </ul>
+            </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/jeffery_tucker_nl-icon.jpg"
+                    alt="Jeffrey Tucker" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Jeffrey Tucker</div>
+                    <p class="newsletter-item__description">Thought provoking column on society and culture</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/opinion_nl-icon.jpg" alt="Epoch Opinion"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Opinion</div>
+                    <p class="newsletter-item__description">Commentators that take you beyond the headlines</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -549,22 +716,58 @@
             <div class="nav-bar__dropdown-left">
               <div class="nav-bar__dropdown-heading">EpochHealth</div>
               <p class="nav-bar__dropdown-description">
-                Get the latest health news, in-depth features, and expert insights to make wise choices for mind,
-                body,and soul.
+                Get the latest health news, in-depth features, and expert insights to make wise choices for mind, body,
+                and
+                soul.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">EpochHealth</a></li>
-                <li><a href="#">Wellness</a></li>
-                <li><a href="#">Nutrition</a></li>
-                <li><a href="#">Fitness</a></li>
                 <li><a href="#">Mental Health</a></li>
+                <li><a href="#">Wellness</a></li>
                 <li><a href="#">COVID-19</a></li>
+                <li><a href="#">Nutrition</a></li>
                 <li><a href="#">Integrative Health</a></li>
+                <li><a href="#">Fitness</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/wellness_2_nl-icon.jpg" alt="Wellness"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Wellness</div>
+                    <p class="newsletter-item__description">A weekly read to strengthen your body, mind and soul.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/integrative_medicine_nl-icon.jpg"
+                    alt="Integrative Medicine" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Integrative Medicine</div>
+                    <p class="newsletter-item__description">Science-backed remedies and holistic tips.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://img.theepochtimes.com/assets/uploads/2024/12/24/id5781400-Rise-Shine-Icon.png.jpg"
+                    alt="Epoch Health: Rise & Shine" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Health: Rise &amp; Shine</div>
+                    <p class="newsletter-item__description">Vital news and wellness insights</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -582,17 +785,37 @@
                 An inspiring curation of all that’s best in the world of art and culture.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">Bright</a></li>
-                <li><a href="#">Arts & Culture</a></li>
-                <li><a href="#">Family & Education</a></li>
                 <li><a href="#">American Essence</a></li>
+                <li><a href="#">Arts &amp; Culture</a></li>
                 <li><a href="#">Personal Finance</a></li>
+                <li><a href="#">Family &amp; Education</a></li>
                 <li><a href="#">Leadership</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img
+                    src="https://img.theepochtimes.com/assets/uploads/2025/08/06/id5897544-image_2025-08-06T10_51_40.png"
+                    alt="Bright" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Bright</div>
+                    <p class="newsletter-item__description">Arts and culture stories</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -607,22 +830,65 @@
             <div class="nav-bar__dropdown-left">
               <div class="nav-bar__dropdown-heading">Lifestyle</div>
               <p class="nav-bar__dropdown-description">
-                Your guide to leisure and entertainment, from great recipes and lifestyle tips to fabulous
-                destinations.
+                Your guide to leisure and entertainment, from great recipes and lifestyle tips to fabulous destinations.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Life</a></li>
-                <li><a href="#">Food</a></li>
-                <li><a href="#">Travel</a></li>
                 <li><a href="#">Science</a></li>
+                <li><a href="#">Life</a></li>
                 <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Food</a></li>
                 <li><a href="#">Sports</a></li>
+                <li><a href="#">Travel</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/american_history_nl-icon.jpg"
+                    alt="American History" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">American History</div>
+                    <p class="newsletter-item__description">A look at American history and values.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/good_life_nl-icon.jpg" alt="The Good Life"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">The Good Life</div>
+                    <p class="newsletter-item__description">Your guide to enjoying leisure: food, travel, and more.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/american_essence_nl-icon.jpg"
+                    alt="American Essence" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">American Essence</div>
+                    <p class="newsletter-item__description">A newsletter for everyone who loves America.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img
+                    src="https://img.theepochtimes.com/assets/uploads/2025/08/06/id5897544-image_2025-08-06T10_51_40.png"
+                    alt="Bright" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Bright</div>
+                    <p class="newsletter-item__description">Arts and culture stories</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -640,69 +906,124 @@
                 Exercising your brain with new puzzles and games added daily.
               </p>
             </div>
-            <div class="nav-bar__dropdown-right">
+
+            <div class="nav-bar__dropdown-right" style="width: 420px;">
               <div class="nav-bar__dropdown-title">Sections</div>
-              <ul class="nav-bar__dropdown-list">
+              <ul class="nav-bar__dropdown-list nav-bar__dropdown-list--games">
                 <li><a href="#">Games</a></li>
-                <li><a href="#">Sudoku</a></li>
-                <li><a href="#">Spot the Difference</a></li>
-                <li><a href="#">Blossom Word Game</a></li>
-                <li><a href="#">Word Search Central</a></li>
-                <li><a href="#">Sweet Shuffle</a></li>
-                <li><a href="#">Today’s Hurdle</a></li>
-                <li><a href="#">Mahjong Dimensions</a></li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2021/10/05/id5541711-Sudoku-512x340-1.jpeg"
+                    alt="Sudoku">
+                  <a href="#">Sudoku</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2024/03/22/id5829581-Spot-the-Difference-3-21-25-300x180.png"
+                    alt="Spot the Difference">
+                  <a href="#">Spot the Difference</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2023/11/02/id5540060-Blossom-Word-Game-Cover.png"
+                    alt="Blossom Word Game">
+                  <a href="#">Blossom Word Game</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2021/10/05/Epoch-Word-Search-Central-1.png"
+                    alt="Word Search Central">
+                  <a href="#">Word Search Central</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2021/10/19/Sweet-Shuffle-Cover-2.jpg"
+                    alt="Sweet Shuffle">
+                  <a href="#">Sweet Shuffle</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2023/01/05/Todays-Hurdle-Cover-300x180.jpg"
+                    alt="Today’s Hurdle">
+                  <a href="#">Today’s Hurdle</a>
+                </li>
+                <li>
+                  <img class="nav-bar__game-icon"
+                    src="https://img.theepochtimes.com/assets/uploads/2021/09/23/1080x400-300x180.jpg"
+                    alt="Mahjong Dimensions">
+                  <a href="#">Mahjong Dimensions</a>
+                </li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/epoch_fun_nl-icon.jpg" alt="Epoch Fun"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Epoch Fun</div>
+                    <p class="newsletter-item__description">Handpicked brain games everyday.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
+
+
       <div class="nav-bar__item nav-bar__item--full-width">
         <a href="#" class="nav-bar__link">
-          Opinion
+          Sports
           <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
         </a>
         <div class="nav-bar__dropdown">
           <div class="nav-bar__dropdown-content">
             <div class="nav-bar__dropdown-left">
-              <div class="nav-bar__dropdown-heading">Opinion</div>
+              <div class="nav-bar__dropdown-heading">Sports</div>
               <p class="nav-bar__dropdown-description">
-                Expert opinion, rigorous arguments, and profound insights—grounded in principled discourse and the
-                timeless pursuit of wisdom.
+                Get the biggest updates, scores, and analysis from the world of sports, covering the NFL, NBA, MLB,
+                soccer,
+                and tennis.
               </p>
             </div>
-            <div class="nav-bar__dropdown-right">
-              <div class="nav-bar__dropdown-title">Sections</div>
-              <ul class="nav-bar__dropdown-list">
-                <li><a href="#">Opinion</a></li>
-                <li><a href="#">Editorials</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="nav-bar__item nav-bar__item--full-width">
-        <a href="#" class="nav-bar__link">
-          Opinion
-          <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
-        </a>
-        <div class="nav-bar__dropdown">
-          <div class="nav-bar__dropdown-content">
-            <div class="nav-bar__dropdown-left">
-              <div class="nav-bar__dropdown-heading">Opinion</div>
-              <p class="nav-bar__dropdown-description">
-                Expert opinion, rigorous arguments, and profound insights—grounded in principled discourse and the
-                timeless pursuit of wisdom.
-              </p>
-            </div>
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
-                <li><a href="#">Opinion</a></li>
-                <li><a href="#">Editorials</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">MLB</a></li>
+                <li><a href="#">NFL</a></li>
+                <li><a href="#">Soccer</a></li>
+                <li><a href="#">NBA</a></li>
+                <li><a href="#">Tennis</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://img.theepochtimes.com/assets/uploads/2025/04/15/id5842276-Frame-1000001311.png"
+                    alt="The Spotlight" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">The Spotlight</div>
+                    <p class="newsletter-item__description"></p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -727,15 +1048,53 @@
                 Stay informed with our news video platform, delivering breaking stories and in-depth analysis.
               </p>
             </div>
+
             <div class="nav-bar__dropdown-right">
               <div class="nav-bar__dropdown-title">Sections</div>
               <ul class="nav-bar__dropdown-list">
                 <li><a href="#">EpochTV</a></li>
-                <li><a href="#">Talk Shows</a></li>
-                <li><a href="#">News</a></li>
                 <li><a href="#">Documentaries</a></li>
+                <li><a href="#">Talk Shows</a></li>
+                <li><a href="#">Cinema</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Arts &amp; Culture</a></li>
               </ul>
             </div>
+
+            <div class="nav-bar__dropdown-newsletters">
+              <div class="nav-bar__dropdown-title">Newsletters</div>
+              <div class="newsletter-list">
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/factsmatter_nl-icon.jpg" alt="Facts Matter"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Facts Matter</div>
+                    <p class="newsletter-item__description">Updates from Roman Balmakov and Facts Matter.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/joshuwa_nl-icon.jpg" alt="Crossroads"
+                    class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">Crossroads</div>
+                    <p class="newsletter-item__description">A deep dive into news, ideology, culture, and politics.</p>
+                  </div>
+                </a>
+                <a href="#" class="newsletter-item">
+                  <img src="https://cdn.epoch.cloud/assets/static_assets/american_thought_leaders_nl-icon.jpg"
+                    alt="American Thought Leaders" class="newsletter-item__image">
+                  <div class="newsletter-item__content">
+                    <div class="newsletter-item__title">American Thought Leaders</div>
+                    <p class="newsletter-item__description"> Thought-provoking conversations on issues that matter.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="newsletter-see-all">
+                <a href="#">See all newsletters</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -795,7 +1154,12 @@
               <span>641</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>489</span>
             </a>
           </div>
@@ -829,7 +1193,12 @@
                 <span class="meta-item__text">143</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">35</span>
               </a>
             </div>
@@ -868,7 +1237,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -897,7 +1271,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -926,7 +1305,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -956,7 +1340,12 @@
               <span>223</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>199</span>
             </a>
           </div>
@@ -1006,7 +1395,12 @@
                 <span>49</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span>151</span>
               </a>
             </div>
@@ -1040,7 +1434,12 @@
                   <div class="article-card__meta">
                     <span class="meta-item"><i class="fa-regular fa-clock"></i> 12 Min</span>
                     <span class="meta-item"><i class="fa-regular fa-comment"></i> 52</span>
-                    <span class="meta-item"><i class="fa-regular fa-share-from-square"></i> 143</span>
+                    <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                        stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                        <path
+                          d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                          stroke-linejoin="round"></path>
+                      </svg> 143</span>
                   </div>
                 </div>
               </article>
@@ -1059,7 +1458,12 @@
                   <div class="article-card__meta">
                     <span class="meta-item"><i class="fa-regular fa-clock"></i> 11 Min</span>
                     <span class="meta-item"><i class="fa-regular fa-comment"></i> 46</span>
-                    <span class="meta-item"><i class="fa-regular fa-share-from-square"></i> 76</span>
+                    <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                        stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                        <path
+                          d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                          stroke-linejoin="round"></path>
+                      </svg> 76</span>
                   </div>
                 </div>
               </article>
@@ -1077,7 +1481,12 @@
                   <div class="article-card__meta">
                     <span class="meta-item"><i class="fa-regular fa-clock"></i> 11 Min</span>
                     <span class="meta-item"><i class="fa-regular fa-comment"></i> 502</span>
-                    <span class="meta-item"><i class="fa-regular fa-share-from-square"></i> 343</span>
+                    <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                        stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                        <path
+                          d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                          stroke-linejoin="round"></path>
+                      </svg> 343</span>
                   </div>
                 </div>
               </article>
@@ -1096,7 +1505,12 @@
                   <div class="article-card__meta">
                     <span class="meta-item"><i class="fa-regular fa-clock"></i> 9 Min</span>
                     <span class="meta-item"><i class="fa-regular fa-comment"></i> 346</span>
-                    <span class="meta-item"><i class="fa-regular fa-share-from-square"></i> 576</span>
+                    <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                        stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                        <path
+                          d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                          stroke-linejoin="round"></path>
+                      </svg> 576</span>
                   </div>
                 </div>
               </article>
@@ -1137,7 +1551,12 @@
               <span>29</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>6</span>
             </a>
           </div>
@@ -1205,7 +1624,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -1232,7 +1656,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -1261,7 +1690,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -1293,7 +1727,12 @@
               <span>229</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>61</span>
             </a>
           </div>
@@ -1338,7 +1777,12 @@
               <span>29</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>8</span>
             </a>
           </div>
@@ -1514,7 +1958,12 @@
               <span>7</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>6</span>
             </a>
           </div>
@@ -1557,7 +2006,12 @@
               <span>17</span>
             </a>
             <a href="#" class="story-card__meta-item">
-              <i class="fa-regular fa-share-from-square"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                <path
+                  d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                  stroke-linejoin="round"></path>
+              </svg>
               <span>3</span>
             </a>
           </div>
@@ -1599,7 +2053,12 @@
             <div class="article-meta">
               <a href="#" class="meta-item"><i class="fa-regular fa-clock"></i> 4 Min</a>
               <a href="#" class="meta-item"><i class="fa-regular fa-comment"></i> 37</a>
-              <a href="#" class="meta-item"><i class="fa-solid fa-share-square"></i> 82</a>
+              <a href="#" class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                  stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>82</a>
             </div>
             <hr class="content__divider">
             <a href="#" class="featured-story__link">
@@ -1636,6 +2095,13 @@
                 <div class="article-card__meta">
                   <span class="meta-item"><i class="fa-regular fa-clock"></i> 5 Min</span>
                   <span class="meta-item"><i class="fa-regular fa-comment"></i> 50</span>
+                  <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                      stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                      <path
+                        d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                        stroke-linejoin="round"></path>
+                    </svg>82
+                  </span>
                 </div>
               </div>
             </article>
@@ -1654,6 +2120,14 @@
                 <div class="article-card__meta">
                   <span class="meta-item"><i class="fa-regular fa-clock"></i> 1 Min</span>
                   <span class="meta-item"><i class="fa-regular fa-comment"></i> 6</span>
+                  <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                      stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+
+                      <path
+                        d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                        stroke-linejoin="round"></path>
+                    </svg>82
+                  </span>
                 </div>
               </div>
             </article>
@@ -1671,6 +2145,13 @@
                 <div class="article-card__meta">
                   <span class="meta-item"><i class="fa-regular fa-clock"></i> 8 Min</span>
                   <span class="meta-item"><i class="fa-regular fa-comment"></i> 20</span>
+                  <span class="meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                      stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                      <path
+                        d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                        stroke-linejoin="round"></path>
+                    </svg>82
+                  </span>
                 </div>
               </div>
             </article>
@@ -1708,7 +2189,12 @@
                 <span class="meta-item__text">40</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">85</span>
               </a>
             </div>
@@ -1751,7 +2237,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -1780,7 +2271,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -1807,7 +2303,12 @@
                   <span class="meta-item__text">143</span>
                 </a>
                 <a href="#" class="meta-item">
-                  <i class="fa-regular fa-share-from-square"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>
                   <span class="meta-item__text">35</span>
                 </a>
               </div>
@@ -2014,7 +2515,12 @@
               <div class="article-meta">
                 <a href="#"><i class="fa-regular fa-clock"></i>11 Min</a>
                 <a href="#"><i class="fa-regular fa-comment"></i>32</a>
-                <a href="#"><i class="fa-regular fa-share-from-square"></i>691</a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                    stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>691</a>
               </div>
             </div>
           </article>
@@ -2035,7 +2541,12 @@
               <div class="article-meta">
                 <a href="#"><i class="fa-regular fa-clock"></i>5 Min</a>
                 <a href="#"><i class="fa-regular fa-comment"></i>3</a>
-                <a href="#"><i class="fa-regular fa-share-from-square"></i>21</a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                    stroke="currentColor" viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                    <path
+                      d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                      stroke-linejoin="round"></path>
+                  </svg>21</a>
               </div>
             </div>
           </article>
@@ -2431,7 +2942,12 @@
                 <span class="meta-item__text">143</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">35</span>
               </a>
             </div>
@@ -2458,7 +2974,12 @@
                 <span class="meta-item__text">75</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">23</span>
               </a>
             </div>
@@ -2485,7 +3006,12 @@
                 <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">5</span>
               </a>
             </div>
@@ -2512,7 +3038,12 @@
                 <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">34</span>
               </a>
             </div>
@@ -2538,7 +3069,12 @@
                 <span class="meta-item__text">23</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">2</span>
               </a>
             </div>
@@ -2703,7 +3239,12 @@
                 <span class="meta-item__text">87</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">3</span>
               </a>
             </div>
@@ -2730,7 +3271,12 @@
                 <span class="meta-item__text">44</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">1</span>
               </a>
             </div>
@@ -2757,7 +3303,12 @@
                 <span class="meta-item__text">45</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">2</span>
               </a>
             </div>
@@ -2784,7 +3335,12 @@
                 <span class="meta-item__text">86</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">27</span>
               </a>
             </div>
@@ -2811,7 +3367,12 @@
                 <span class="meta-item__text">65</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">9</span>
               </a>
             </div>
@@ -2869,7 +3430,12 @@
                 <span class="meta-item__text">98</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">6</span>
               </a>
             </div>
@@ -2896,7 +3462,12 @@
                 <span class="meta-item__text">35</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">11</span>
               </a>
             </div>
@@ -2923,7 +3494,12 @@
                 <span class="meta-item__text">54</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">12</span>
               </a>
             </div>
@@ -2950,7 +3526,12 @@
                 <span class="meta-item__text">74</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">3</span>
               </a>
             </div>
@@ -2977,7 +3558,12 @@
                 <span class="meta-item__text">85</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">6</span>
               </a>
             </div>
@@ -3030,7 +3616,8 @@
 
         <ul class="post-list">
           <li class="post-list__item">
-            <a href="#" class="post-list__link title title">Fixer-Upper Homes Offer Better Deals, Especially in South and
+            <a href="#" class="post-list__link title title">Fixer-Upper Homes Offer Better Deals, Especially in South
+              and
               Midwest:
               Report</a>
           </li>
@@ -3254,7 +3841,12 @@
                 <span class="meta-item__text">43</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">23</span>
               </a>
             </div>
@@ -3281,7 +3873,12 @@
                 <span class="meta-item__text">58</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">4</span>
               </a>
             </div>
@@ -3308,7 +3905,12 @@
                 <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">23</span>
               </a>
             </div>
@@ -3335,7 +3937,12 @@
                 <span class="meta-item__text">76</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">5</span>
               </a>
             </div>
@@ -3362,7 +3969,12 @@
                 <span class="meta-item__text">143</span>
               </a>
               <a href="#" class="meta-item">
-                <i class="fa-regular fa-share-from-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                  viewBox="2.5 3.5 14 14" class="my-2.5 ml-2.5 mr-2 size-[14px]">
+                  <path
+                    d="M9.58464 5.25L10.418 8.16667C9.58464 8.16667 7.91797 8.16667 6.2513 9.83333C4.77816 11.3065 4.16797 13.5833 4.16797 15.6667C5.0013 14.4167 6.12316 13.0544 7.08464 12.3333C8.30547 11.4177 9.58464 11.0833 10.418 11.0833L9.58464 14.4167L15.8346 9.83333L9.58464 5.25Z"
+                    stroke-linejoin="round"></path>
+                </svg>
                 <span class="meta-item__text">35</span>
               </a>
             </div>
@@ -3412,7 +4024,8 @@
 
         <ul class="post-list">
           <li class="post-list__item">
-            <a href="#" class="post-list__link title font-light">Study Links Sugary Drinks to Colorectal Cancer Spreading
+            <a href="#" class="post-list__link title font-light">Study Links Sugary Drinks to Colorectal Cancer
+              Spreading
               Elsewhere in the Body</a>
           </li>
           <li class="post-list__item">
@@ -3451,10 +4064,12 @@
           </div>
         </article>
         <ul class="post-list">
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">How Frozen Staples Can Preserve
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">How Frozen Staples Can
+              Preserve
               Nutrition and Cut Waste</a>
           </li>
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">5 Swinging and Pendulum Exercises
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">5 Swinging and Pendulum
+              Exercises
               to Maximize Whole Body Movement</a></li>
         </ul>
       </div>
@@ -3482,9 +4097,11 @@
           </div>
         </article>
         <ul class="post-list">
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">5 Ways to Boost Fertility in a
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">5 Ways to Boost Fertility in
+              a
               World of Declining Birth Rates</a></li>
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">Constipation Could Signal a Deeper
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">Constipation Could Signal a
+              Deeper
               Bodily Imbalance–Natural Self-Care Strategies
             </a></li>
         </ul>
@@ -3520,7 +4137,8 @@
               Inflammation</a>
           </li>
           <li class="post-list__item">
-            <a href="#" class="post-list__link title font-light">All You Need to Know About Chagas, the ‘Kissing Bug’ Disease
+            <a href="#" class="post-list__link title font-light">All You Need to Know About Chagas, the ‘Kissing Bug’
+              Disease
               Recently Labeled Endemic</a>
           </li>
         </ul>
@@ -3562,7 +4180,8 @@
 
         <ul class="post-list">
           <li class="post-list__item">
-            <a href="#" class="post-list__link title font-light">Head to Orange County, California, for the Best Sourdough in
+            <a href="#" class="post-list__link title font-light">Head to Orange County, California, for the Best
+              Sourdough in
               the Universe. And It’s Purple</a>
           </li>
           <li class="post-list__item">
@@ -3602,7 +4221,8 @@
         <ul class="post-list">
           <li class="post-list__item"><a href="#" class="post-list__link title font-light">Make a Gravel Path</a>
           </li>
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">How to Kill Dust Mites Inside Your
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">How to Kill Dust Mites Inside
+              Your
               Home—Without Breaking the Bank</a></li>
         </ul>
       </div>
@@ -3630,9 +4250,11 @@
           </div>
         </article>
         <ul class="post-list">
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">The Movement That Teaches Kids to
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">The Movement That Teaches
+              Kids to
               Learn From History’s Greats Instead of Cancelling Them</a></li>
-          <li class="post-list__item"><a href="#" class="post-list__link title font-light">Finding the Meaning of Freedom in
+          <li class="post-list__item"><a href="#" class="post-list__link title font-light">Finding the Meaning of
+              Freedom in
               Half an Egg: Political Prisoner’s Reflections After 1,000 Days Behind Chinese Bars</a></li>
         </ul>
       </div>
@@ -3664,12 +4286,14 @@
 
         <ul class="post-list">
           <li class="post-list__item">
-            <a href="#" class="post-list__link title font-light">Fixer-Upper Homes Offer Better Deals, Especially in South and
+            <a href="#" class="post-list__link title font-light">Fixer-Upper Homes Offer Better Deals, Especially in
+              South and
               Midwest:
               Report</a>
           </li>
           <li class="post-list__item">
-            <a href="#" class="post-list__link title font-light">Former Tennessee House Speaker Sentenced to 3 Years in Prison
+            <a href="#" class="post-list__link title font-light">Former Tennessee House Speaker Sentenced to 3 Years in
+              Prison
               in
               Legislative Mail Scheme</a>
           </li>
@@ -4010,27 +4634,27 @@
 
     // Submenu trong menu sidebar
     document.addEventListener('DOMContentLoaded', function () {
-        const menuItemsWithSubmenu = document.querySelectorAll('.sidebar-nav__item--has-submenu');
+      const menuItemsWithSubmenu = document.querySelectorAll('.sidebar-nav__item--has-submenu');
 
-        menuItemsWithSubmenu.forEach(item => {
-          const submenu = item.querySelector('.sidebar-nav__submenu');
-          if (!submenu) return;
+      menuItemsWithSubmenu.forEach(item => {
+        const submenu = item.querySelector('.sidebar-nav__submenu');
+        if (!submenu) return;
 
-          // Khi di chuột vào
-          item.addEventListener('mouseenter', function () {
-            // Lấy thông tin vị trí và kích thước của mục cha (li)
-            const rect = item.getBoundingClientRect();
+        // Khi di chuột vào
+        item.addEventListener('mouseenter', function () {
+          // Lấy thông tin vị trí và kích thước của mục cha (li)
+          const rect = item.getBoundingClientRect();
 
-            // Tính toán vị trí cho menu con
-            const topPosition = rect.top; // Cùng vị trí top với mục cha
-            const leftPosition = rect.right; // Ngay bên phải của mục cha
+          // Tính toán vị trí cho menu con
+          const topPosition = rect.top; // Cùng vị trí top với mục cha
+          const leftPosition = rect.right; // Ngay bên phải của mục cha
 
-            // Áp dụng vị trí cho menu con
-            submenu.style.top = `${topPosition}px`;
-            submenu.style.left = `${leftPosition}px`;
-          });
+          // Áp dụng vị trí cho menu con
+          submenu.style.top = `${topPosition}px`;
+          submenu.style.left = `${leftPosition}px`;
         });
       });
+    });
 
     // SEARCH
     document.addEventListener('DOMContentLoaded', function () {
