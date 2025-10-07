@@ -2381,7 +2381,7 @@ aside.page__sidebar {
 }
 
 .article-card img {
-  height: 190px;
+  height: 165px;
   width: 100%;
 }
 
@@ -2613,14 +2613,14 @@ aside.page__sidebar {
 
 .category-grid .featured-post__image {
   /* width: 100%; */
-  max-width: 380px;
+  max-width: 377px;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   margin-bottom: 0.75rem;
 }
 
 .category-grid-4 .featured-post__image {
-  max-width: 280px;
+  max-width: 275px;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   margin-bottom: 0.75rem;
@@ -2737,13 +2737,12 @@ aside.page__sidebar {
 
 .site-footer a {
   color: inherit;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .site-footer__container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* -- Header -- */
@@ -2957,7 +2956,7 @@ aside.page__sidebar {
 /* Lưới 4 cột cho các chuyên mục bên trong cột phải */
 .site-footer__right-panel {
   grid-template-columns: repeat(4, 1fr);
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 @media (max-width: 1024px) {
