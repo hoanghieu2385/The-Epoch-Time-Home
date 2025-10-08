@@ -15,7 +15,7 @@ svg {
   width: 14px;
 }
 
-[class*="title"] {
+[class*='title'] {
   font-family: serif;
   font-size: 1.375rem;
 }
@@ -141,7 +141,7 @@ svg {
   width: 100%;
   height: 44px;
   border-radius: 4px;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
   padding: 0.75rem 42px 0.75rem 0.75rem;
   font-size: 0.875rem;
 }
@@ -161,7 +161,7 @@ svg {
 
 .sidebar-nav__search-divider {
   height: 24px;
-  border-left: 1px solid #DFDFDF;
+  border-left: 1px solid #dfdfdf;
   margin-right: 0.5rem;
 }
 
@@ -186,7 +186,7 @@ svg {
   padding: 0 1.5rem;
   font-size: 0.875rem;
   font-weight: bold;
-  color: #2F2F2F;
+  color: #2f2f2f;
   text-decoration: none;
 }
 
@@ -196,7 +196,7 @@ svg {
   height: 40px;
   padding: 0 1.5rem;
   font-weight: bold;
-  color: #2F2F2F;
+  color: #2f2f2f;
 }
 
 .sidebar-nav__group-title {
@@ -215,7 +215,7 @@ svg {
 
 .sidebar-nav__divider {
   border: none;
-  border-top: 1px solid #B5B5B5;
+  border-top: 1px solid #b5b5b5;
   margin: 0.75rem 1.5rem;
 }
 
@@ -233,13 +233,13 @@ svg {
 }
 
 .sidebar-nav__footer-item:hover {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 .sidebar-nav__footer-link {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #2F2F2F;
+  color: #2f2f2f;
   text-decoration: none;
 }
 
@@ -252,8 +252,8 @@ svg {
   background-color: #fff;
 }
 
-.sidebar-nav__item--has-submenu:hover>.sidebar-nav__group {
-  background-color: #F4F4F4;
+.sidebar-nav__item--has-submenu:hover > .sidebar-nav__group {
+  background-color: #f4f4f4;
 }
 
 .sidebar-nav__submenu {
@@ -269,7 +269,7 @@ svg {
 }
 
 /* Khi di chuột vào item cha, hiển thị menu con */
-.sidebar-nav__item--has-submenu:hover>.sidebar-nav__submenu {
+.sidebar-nav__item--has-submenu:hover > .sidebar-nav__submenu {
   visibility: visible;
   opacity: 1;
 }
@@ -277,7 +277,7 @@ svg {
 .sidebar-nav__submenu-link {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #2F2F2F;
+  color: #2f2f2f;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -291,7 +291,7 @@ svg {
 }
 
 .sidebar-nav__submenu-link:hover {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 .sidebar-nav__item--has-submenu .sidebar-nav__toggle i {
@@ -331,7 +331,7 @@ svg {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #A6A6A6;
+  color: #a6a6a6;
   cursor: pointer;
 }
 
@@ -349,7 +349,7 @@ svg {
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px solid #DFDFDF;
+  border: 1px solid #dfdfdf;
   border-radius: 9999px;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
   background-color: #fff;
@@ -366,7 +366,7 @@ svg {
 .search-overlay__divider {
   width: 1px;
   align-self: stretch;
-  background-color: #DFDFDF;
+  background-color: #dfdfdf;
   margin: -0.5rem 0.75rem;
 }
 
@@ -410,7 +410,7 @@ svg {
 
 .nav-bar__editions-menu a:hover {
   font-weight: bolder;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
 .nav-bar__editions-divider {
@@ -655,8 +655,8 @@ svg {
 }
 
 .nav-bar__right .dark-btn {
-  background: #0D73EA;
-  border: 1px solid #0D73EA;
+  background: #0d73ea;
+  border: 1px solid #0d73ea;
 }
 
 /* Chung */
@@ -665,7 +665,6 @@ svg {
   margin-right: auto;
   max-width: 1200px;
 }
-
 
 /* *** Header  */
 .header {
@@ -676,7 +675,7 @@ svg {
   margin-top: 3rem;
 
   padding-bottom: 1rem;
-  border-bottom: 1px solid #CFCFCF;
+  border-bottom: 1px solid #cfcfcf;
 }
 
 .header .header__center img {
@@ -714,7 +713,8 @@ svg {
 }
 
 .page__divider {
-  border: 1px solid #a9a9a9;
+  width: 1px;
+  background-color: rgb(181 181 181 / var(--tw-bg-opacity, 1));
   margin: 0 auto;
 }
 
@@ -874,7 +874,6 @@ svg {
   font-size: larger;
   margin: 10px 0;
 }
-
 
 /* --- COMPONENT: PREMIUM-SECTION --- */
 .premium-section {
@@ -1555,13 +1554,12 @@ aside.page__sidebar {
   margin: 0;
 }
 
-
 /* --- Các nút điều khiển --- */
 .carousel__navigation {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
 .carousel .carousel__navigation .carousel__button {
@@ -1604,7 +1602,6 @@ aside.page__sidebar {
   background-color: #333;
 }
 
-
 /* -- LATEST NEWS -- */
 .latest-news {
   display: flex;
@@ -1622,7 +1619,7 @@ aside.page__sidebar {
   border: 0;
   height: 1px;
   width: 100%;
-  background-color: #d1d5db;
+  background-color: #000000;
   margin-bottom: 0.5rem;
 }
 
@@ -1630,14 +1627,13 @@ aside.page__sidebar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1.5;
 }
 
 .latest-news__read-more-link {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .latest-news__read-more-link svg {
@@ -1646,11 +1642,11 @@ aside.page__sidebar {
 }
 
 .latest-news__title-link {
-  font-size: 0.875rem;
+  font-size: 0.89rem;
   font-weight: 600;
-  text-decoration: none;
   text-transform: uppercase;
   color: #111;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* -- Danh sách tin tức -- */
@@ -1677,8 +1673,8 @@ aside.page__sidebar {
 }
 
 .latest-news__timestamp {
-  font-size: 0.75rem;
-  color: #D7360E !important;
+  font-size: 0.85rem;
+  color: #d7360e !important;
   white-space: nowrap;
 }
 
@@ -1708,10 +1704,11 @@ aside.page__sidebar {
   gap: 1rem;
 }
 
-.wellness-section__header {
+.page__sidebar .wellness-section__header {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  padding-top: 10px;
 }
 
 .wellness-section__title-link {
@@ -1799,7 +1796,6 @@ aside.page__sidebar {
   padding-right: 1.25rem;
 }
 
-
 /* ---  FEATURED PODCAST --- */
 .featured-podcast {
   display: flex;
@@ -1809,14 +1805,14 @@ aside.page__sidebar {
 
 .featured-podcast__header {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
 }
 
 .featured-podcast__divider {
   border: 0;
   height: 1px;
   width: 100%;
-  background-color: #d1d5db;
+  background-color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -1827,9 +1823,9 @@ aside.page__sidebar {
 }
 
 .featured-podcast__title-link {
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
-  text-decoration: none;
   text-transform: uppercase;
   color: #111;
 }
@@ -1906,7 +1902,7 @@ aside.page__sidebar {
 .author-articles__top-divider {
   height: 1px;
   width: 100%;
-  background-color: #d1d5db;
+  background-color: rgb(85 85 85 / var(--tw-bg-opacity, 1));
   border: none;
   margin-bottom: 1.5rem;
 }
@@ -1937,9 +1933,7 @@ aside.page__sidebar {
 
 .author-articles__divider {
   height: 1px;
-  background-color: #d1d5db;
-  /* ~bg-gray-40 */
-  border: none;
+  background-color: #666666;
   width: 100%;
 }
 
@@ -1953,7 +1947,7 @@ aside.page__sidebar {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #EEEBFF;
+  background-color: #eeebff;
   padding: 0.75rem;
 }
 
@@ -1994,7 +1988,6 @@ aside.page__sidebar {
   font-weight: 500;
 }
 
-
 /* --- OPINION --- */
 
 .opinion-section {
@@ -2010,9 +2003,9 @@ aside.page__sidebar {
 
 .opinion-section__divider {
   border: 0;
-  height: 1.5px;
+  height: 1px;
   width: 100%;
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
   margin-bottom: 0.5rem;
 }
 
@@ -2025,7 +2018,7 @@ aside.page__sidebar {
 .opinion-section__title-link {
   font-size: 0.875rem;
   font-weight: 600;
-  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
@@ -2036,7 +2029,7 @@ aside.page__sidebar {
   flex-direction: column;
 }
 
-.author-post+.author-post {
+.author-post + .author-post {
   border-top: 1px dashed #d1d5db;
 }
 
@@ -2057,7 +2050,6 @@ aside.page__sidebar {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  /* rounded-full */
   object-fit: cover;
   display: block;
 }
@@ -2069,9 +2061,12 @@ aside.page__sidebar {
   gap: 0.5rem;
 }
 
-.author-post__author,
-.author-post__date {
+.author-post__author {
   font-size: 0.8rem;
+  color: #707070;
+}
+.author-post__date {
+  font-size: 0.7rem;
   color: #707070;
   margin: 0;
 }
@@ -2079,6 +2074,7 @@ aside.page__sidebar {
 .author-post__author-link {
   color: inherit;
   text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .author-post__author-link:hover {
@@ -2115,10 +2111,7 @@ aside.page__sidebar {
 }
 
 .lifestyle-section__divider {
-  border: 0;
-  height: 1.5px;
-  width: 100%;
-  background-color: #2F2F2F;
+  border-top: 1px solid rgb(47, 47, 47);
   margin-bottom: 0.5rem;
 }
 
@@ -2129,9 +2122,9 @@ aside.page__sidebar {
 }
 
 .lifestyle-section__title-link {
-  font-size: 0.875rem;
+  font-size: 0.895rem;
   font-weight: 600;
-  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
@@ -2181,15 +2174,14 @@ aside.page__sidebar {
 }
 
 .lifestyle-card__link {
-  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .lifestyle-card__title {
   font-size: 1rem;
   font-weight: 300;
-  /* ~font-light */
-  color: #111;
-  line-height: 1.4;
+  font-family: var(--font-et-headline), Georgia, Times New Roman, Times, serif;
+  line-height: 1.2;
   margin: 0;
   overflow: hidden;
   display: -webkit-box;
@@ -2232,7 +2224,7 @@ aside.page__sidebar {
 .most-read__divider {
   border: none;
   height: 1px;
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
   margin-bottom: 0.5rem;
 }
 
@@ -2314,7 +2306,6 @@ aside.page__sidebar {
   margin-top: 1rem;
 }
 
-
 /* *** BLOCK GROUP */
 .block-group {
   width: 1200px;
@@ -2328,9 +2319,9 @@ aside.page__sidebar {
   margin-top: 1.5rem;
 }
 
-.food-section__header{
+.food-section__header {
   margin-bottom: 1rem;
-  border-top: 2px solid #2F2F2F;
+  border-top: 2px solid #2f2f2f;
 }
 
 .wellness-section__header,
@@ -2577,7 +2568,6 @@ aside.page__sidebar {
   border-right: 1px dashed #d1d5db;
 }
 
-
 .category-column__header {
   margin-bottom: 1.5rem;
 }
@@ -2620,7 +2610,7 @@ aside.page__sidebar {
   max-width: 377px;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .category-grid-4 .featured-post__image {
@@ -2631,8 +2621,7 @@ aside.page__sidebar {
 }
 
 .featured-post__title {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.15rem;
   line-height: 1.4;
   margin: 0;
 }
@@ -2650,7 +2639,7 @@ aside.page__sidebar {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px dashed #d1d5db;
-  height: 4rem;
+  height: 5rem;
 }
 
 .category-grid-4 .post-list__item {
@@ -2660,36 +2649,28 @@ aside.page__sidebar {
   height: 5rem;
 }
 
-.post-list__item:last-child {
-  border-bottom: none;
-}
-
 .post-list__link {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.4;
   text-decoration: none;
-  color: #333;
 }
-
 
 /* -- Link xem thêm -- */
 .category-column__footer {
-  margin-top: 1.5rem;
+align-self: start;
 }
 
 .read-more-link {
   display: flex;
-  align-items: center;
   gap: 0.25rem;
-  font-weight: 700;
+  font-weight: 550;
+  margin-top: 1rem;
   text-decoration: none;
-  color: #111;
-  font-size: 0.875rem;
 }
 
 .read-more-link svg {
-  width: 1rem;
+  width: 1rem; 
   height: 1rem;
 }
 
@@ -2723,14 +2704,13 @@ aside.page__sidebar {
 
 .font-light {
   font-weight: 300 !important;
+  font-family: Georgia,Times New Roman,Times,serif;
 }
 
 .category-grid-4 .featured-post__link,
 .category-grid-4 .post-list__link {
   min-height: 5rem;
 }
-
-
 
 /* --- SITE FOOTER --- */
 .site-footer {
@@ -2759,12 +2739,12 @@ aside.page__sidebar {
   padding: 1rem 0;
 }
 
-.site-footer .site-footer__action-button{
+.site-footer .site-footer__action-button {
   font-size: 1rem;
   background-color: white;
 }
 
-.site-footer .site-footer__action-button svg{
+.site-footer .site-footer__action-button svg {
   margin-right: 3px;
 }
 
@@ -2836,7 +2816,6 @@ aside.page__sidebar {
 .subscribe-box {
   padding: 1rem 0;
 }
-
 
 .site-footer__info-links {
   display: flex;
@@ -2983,7 +2962,6 @@ aside.page__sidebar {
 
   .nav-bar__item--full-width {
     padding: 12px 14px 12px 0;
-    ;
   }
 
   .nav-bar__item--full-width .nav-bar__dropdown {
@@ -3029,5 +3007,4 @@ aside.page__sidebar {
   .site-footer__right-panel {
     padding: 0;
   }
-
 }
