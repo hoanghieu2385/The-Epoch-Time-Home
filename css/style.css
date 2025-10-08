@@ -2573,12 +2573,13 @@ aside.page__sidebar {
 }
 
 .category-column__title {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
   color: #111;
   text-transform: uppercase;
   padding-bottom: 4px;
+  font-family: sans-serif;
 }
 
 .category-column__title-accent {
