@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -2705,7 +2708,7 @@ align-self: start;
 
 .font-light {
   font-weight: 300 !important;
-  font-family: Georgia,Times New Roman,Times,serif;
+  font-family: EB Garamond ,Times,serif;
 }
 
 .category-grid-4 .featured-post__link,
