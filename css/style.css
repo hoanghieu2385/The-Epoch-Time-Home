@@ -486,9 +486,11 @@ svg {
 }
 
 .nav-bar__dropdown-heading {
-  font-size: 28px;
+  font-family: 'EB Garamond';
+  font-size: 26px;
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 300 !important;
+  color: rgb(47, 47, 47);
 }
 
 .nav-bar__dropdown-description {
