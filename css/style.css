@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 * {
   margin: 0;
@@ -930,6 +931,7 @@ svg {
 }
 
 .premium-section .premium-section__title-link {
+  font-family: sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
@@ -1091,7 +1093,7 @@ svg {
 }
 
 .premium-section .carousel-button {
-  border: 1px solid #ccc;
+  border: 1px solid #2f2f2f;
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -1573,6 +1575,11 @@ aside.page__sidebar {
   font-size: 1.25rem;
   font-weight: bold;
   margin: 0 0 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Số dòng tối đa */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slide-content__description {
@@ -2982,6 +2989,16 @@ aside.page__sidebar {
 }
 
 @media (max-width: 1024px) {
+  [class*='title'] {
+    font-family: serif;
+    font-size: 1.2rem;
+  }
+
+  .font-light {
+    font-weight: 300 !important;
+    font-family: Cormorant Garamond;
+  }
+
   .nav-bar {
     /* font-size: 15px; */
     padding: 0;
@@ -3016,34 +3033,215 @@ aside.page__sidebar {
     padding-right: 1.25rem;
   }
 
+  /* Aside */
+  .slide-content {
+    min-height: 280px;
+  }
+
+  .slide-content__title {
+    line-height: 1.3;
+  }
+
+  .slide-content__description {
+    font-size: 0.8rem;
+  }
+
+  .most-read__title,
+  .lifestyle-section__title-link,
+  .opinion-section__title-link,
+  .featured-podcast__title-link,
+  .wellness-section__title-link,
+  .latest-news__title-link {
+    font-family: sans-serif;
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .post-item__title {
+    font-size: 1.125rem;
+  }
+
   /* Block group */
   .block-group {
-    width: 1024px;
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    width: 984px;
+    margin: 3rem auto 0 auto;
+  }
+
+  .podcasts-section {
+    margin-top: 1.5rem;
+  }
+
+  .food-section__title-link,
+  .podcasts-section__title-link,
+  .wellness-section__title-link,
+  .games-section__title-link {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+
+  .podcasts-section__header {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 5px 0;
+    border-top: 2px solid #555555;
+  }
+
+  .podcast-card__title {
+    font-size: 1rem;
+  }
+
+  .podcast-card {
+    min-width: 328px;
+  }
+
+  .wellness-section__title-wrapper {
+    margin-top: 5px;
+  }
+
+  .wellness-section__header {
+    margin-bottom: 0;
+  }
+
+  .wellness-section .article-carousel {
+    margin-top: 8px;
+  }
+
+  .article-carousel {
+    margin-top: 33px;
+    position: relative;
   }
 
   .article-card img {
     height: 145px;
   }
 
+  .article-card__content {
+    margin-top: 5px;
+  }
+
+  .article-card__title {
+    font-size: 1.1rem;
+  }
+
+  .article-carousel__navigation {
+    margin-top: 0.5rem;
+  }
+
   /* Category cuoi trang */
   .category-grid .featured-post {
-    height: 22rem;
+    height: 18.8rem;
+  }
+
+  .category-grid .category-column__title,
+  .category-grid-4 .category-column__title {
+    font-size: 1rem;
+    font-family: sans-serif;
   }
 
   .category-grid img.featured-post__image {
-    width: 300px;
+    width: 312px;
+  }
+
+  .category-grid .featured-post__title,
+  .category-grid .post-list__link {
+    font-size: 1.1rem;
+  }
+
+  .category-grid .post-list__item {
+    height: 5.5rem;
+  }
+
+  .category-grid .read-more-link {
+    margin-top: 0.7rem;
+  }
+
+  .category-grid-4 .category-column {
+    padding: 0 0.7rem;
+  }
+
+  .category-grid-4 .featured-post {
+    height: 15.2rem;
   }
 
   .category-grid-4 img.featured-post__image {
-    width: 150px;
+    width: auto;
+    height: 152px;
+  }
+
+  .category-grid-4 .post-list__item {
+    height: 5.6rem;
+  }
+
+  .category-grid-4 .featured-post__title,
+  .category-grid-4 .post-list__link {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 400 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Footer */
+  .site-footer {
+    margin-top: 5rem;
+  }
+
+  .site-footer__container {
+    padding: 0 32px;
+  }
+
+  .site-footer__header {
+    width: 980px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .site-footer__actions {
+    max-width: 680px;
+    justify-content: center;
+  }
+
+  .site-footer .site-footer__action-button {
+    font-size: 0.875rem;
+    padding: 0 1.2rem;
+  }
+
+  .site-footer__main-content {
+    padding: 2rem 0;
+  }
+
+  .subscribe-box img {
+    width: 320px;
+  }
+
   .site-footer__right-panel {
-    padding: 0;
+    padding: 20px 0;
+  }
+
+  .site-footer__logo img {
+    width: 228px;
+    height: 32px;
+  }
+
+  .site-footer__main-content li {
+    line-height: 1.3;
+  }
+
+  .site-footer__donation-button {
+    font-size: 14px !important;
+    padding: 8px 18px;
+    margin-bottom: 11rem;
+  }
+
+  .simple-footer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10rem;
   }
 }

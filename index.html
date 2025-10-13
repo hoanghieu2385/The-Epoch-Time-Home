@@ -1740,10 +1740,10 @@
                 aria-label="Previous item"
                 disabled
               >
-                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-left fa-2xs"></i>
               </button>
               <button class="carousel-button carousel-button--next" data-carousel-next aria-label="Next item">
-                <i class="fa-solid fa-chevron-right"></i>
+                <i class="fa-solid fa-chevron-right fa-2xs"></i>
               </button>
             </div>
           </section>
@@ -3262,7 +3262,9 @@
                 <a href="#" class="lifestyle-card__author-link">Jeff Minick</a>
               </p>
               <a href="#" class="lifestyle-card__link">
-                <h3 class="lifestyle-card__title font-light" style="font-size: 1.125rem;">Mark Helprin’s Wisdom From a Lifetime of Adventure and Writing</h3>
+                <h3 class="lifestyle-card__title font-light" style="font-size: 1.125rem">
+                  Mark Helprin’s Wisdom From a Lifetime of Adventure and Writing
+                </h3>
               </a>
             </article>
 
@@ -3278,7 +3280,9 @@
                 <a href="#" class="lifestyle-card__author-link">Jeff Minick</a>
               </p>
               <a href="#" class="lifestyle-card__link">
-                <h3 class="lifestyle-card__title font-light" style="font-size: 1.125rem;">The Painted-Leaf Season: A Literary Look at Autumn</h3>
+                <h3 class="lifestyle-card__title font-light" style="font-size: 1.125rem">
+                  The Painted-Leaf Season: A Literary Look at Autumn
+                </h3>
               </a>
             </article>
           </div>
@@ -3362,7 +3366,9 @@
               </article>
               <article class="article-card" data-carousel-card>
                 <a href="#" class="article-card__link">
-                  <h3 class="article-card__title font-light">More Than 1.9 Million Products Sold Through Amazon Recalled</h3>
+                  <h3 class="article-card__title font-light">
+                    More Than 1.9 Million Products Sold Through Amazon Recalled
+                  </h3>
                 </a>
               </article>
               <article class="article-card" data-carousel-card>
@@ -5962,17 +5968,11 @@
         const prevButton = document.querySelector('.carousel__button--prev');
         const dotsNav = document.querySelector('.carousel__nav');
 
-        // Lấy chiều rộng của một slide
-        const slideWidth = slides[0].getBoundingClientRect().width;
-
-        // Sắp xếp các slide nằm cạnh nhau
-        const setSlidePosition = (slide, index) => {
-          slide.style.left = slideWidth * index + 'px';
-        };
-        slides.forEach(setSlidePosition);
+        // Lấy chiều rộng của viewport thay vì slide đầu tiên để đảm bảo tính nhất quán
+        const slideWidth = document.querySelector('.carousel__viewport').getBoundingClientRect().width;
 
         // Tạo các dấu chấm điều hướng
-        slides.forEach((slide, index) => {
+        slides.forEach((_, index) => {
           const dot = document.createElement('button');
           dot.classList.add('carousel__dot');
           if (index === 0) {
@@ -5980,59 +5980,53 @@
           }
           dotsNav.appendChild(dot);
         });
-
         const dots = Array.from(dotsNav.children);
 
-        // Di chuyển đến slide
-        const moveToSlide = (currentSlide, targetSlide) => {
-          track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-          currentSlide.classList.remove('carousel__slide--active');
-          targetSlide.classList.add('carousel__slide--active');
+        // Di chuyển đến slide - SỬA LẠI HÀM NÀY
+        const moveToSlide = (targetIndex) => {
+          const amountToMove = targetIndex * slideWidth;
+          track.style.transform = `translateX(-${amountToMove}px)`;
+
+          // Cập nhật slide active
+          const currentActiveSlide = track.querySelector('.carousel__slide--active');
+          if (currentActiveSlide) {
+            currentActiveSlide.classList.remove('carousel__slide--active');
+          }
+          slides[targetIndex].classList.add('carousel__slide--active');
         };
 
         // Hàm cập nhật trạng thái của các nút và dấu chấm
         const updateControls = (targetIndex) => {
           // Cập nhật nút prev/next
-          if (targetIndex === 0) {
-            prevButton.disabled = true;
-            nextButton.disabled = false;
-          } else if (targetIndex === slides.length - 1) {
-            prevButton.disabled = false;
-            nextButton.disabled = true;
-          } else {
-            prevButton.disabled = false;
-            nextButton.disabled = false;
-          }
+          prevButton.disabled = targetIndex === 0;
+          nextButton.disabled = targetIndex === slides.length - 1;
 
           // Cập nhật dấu chấm
           const currentDot = dotsNav.querySelector('.carousel__dot--active');
-          const targetDot = dots[targetIndex];
           if (currentDot) {
             currentDot.classList.remove('carousel__dot--active');
           }
-          targetDot.classList.add('carousel__dot--active');
+          dots[targetIndex].classList.add('carousel__dot--active');
         };
 
         // Xử lý khi nhấn nút "Next"
-        nextButton.addEventListener('click', (e) => {
-          const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
-          const currentIndex = slides.findIndex((slide) => slide === currentSlide);
+        nextButton.addEventListener('click', () => {
+          const currentActiveSlide = track.querySelector('.carousel__slide--active') || slides[0];
+          const currentIndex = slides.findIndex((slide) => slide === currentActiveSlide);
           const nextIndex = currentIndex + 1;
-
           if (nextIndex < slides.length) {
-            moveToSlide(currentSlide, slides[nextIndex]);
+            moveToSlide(nextIndex);
             updateControls(nextIndex);
           }
         });
 
         // Xử lý khi nhấn nút "Previous"
-        prevButton.addEventListener('click', (e) => {
-          const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
-          const currentIndex = slides.findIndex((slide) => slide === currentSlide);
+        prevButton.addEventListener('click', () => {
+          const currentActiveSlide = track.querySelector('.carousel__slide--active') || slides[0];
+          const currentIndex = slides.findIndex((slide) => slide === currentActiveSlide);
           const prevIndex = currentIndex - 1;
-
           if (prevIndex >= 0) {
-            moveToSlide(currentSlide, slides[prevIndex]);
+            moveToSlide(prevIndex);
             updateControls(prevIndex);
           }
         });
@@ -6041,18 +6035,14 @@
         dotsNav.addEventListener('click', (e) => {
           const targetDot = e.target.closest('button.carousel__dot');
           if (!targetDot) return;
-
-          const currentSlide = track.querySelector('.carousel__slide--active') || slides[0];
           const targetIndex = dots.findIndex((dot) => dot === targetDot);
-          const targetSlide = slides[targetIndex];
-
-          moveToSlide(currentSlide, targetSlide);
+          moveToSlide(targetIndex);
           updateControls(targetIndex);
         });
 
         // Khởi tạo trạng thái ban đầu
-        updateControls(0);
         slides[0].classList.add('carousel__slide--active');
+        updateControls(0);
       });
 
       // Block group
