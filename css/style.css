@@ -1619,6 +1619,7 @@ aside.page__sidebar {
   display: flex;
   gap: 13px;
   margin: 0 16px;
+  padding-top: 5px;
 }
 
 .carousel__dot {
