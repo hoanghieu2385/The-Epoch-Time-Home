@@ -19,7 +19,7 @@ svg {
 }
 
 .hide-in-desktop {
-  display: none;
+  display: none !important;
 }
 
 [class*='title'] {
@@ -1439,14 +1439,15 @@ svg {
   gap: 0.75rem;
 }
 
-.china-section .featured-story__image-container {
-  order: 1;
-}
-
 .china-section .featured-story__image {
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
+}
+
+.featured-story__image-container {
+  grid-row: span 2;
+
 }
 
 .china-section .featured-story__title {
@@ -1457,6 +1458,7 @@ svg {
 .china-section .featured-story__secondary-title {
   font-size: 1.125rem;
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 .china-section .featured-story__excerpt {
