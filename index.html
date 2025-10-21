@@ -35,7 +35,7 @@
                 <button class="sidebar-nav__close-button" id="close-menu-btn" aria-label="Close menu">
                   <i class="fa-solid fa-xmark"></i>
                 </button>
-                <a class="sidebar-nav__logo" href="/">
+                <a class="sidebar-nav__logo hide-in-desktop" href="/">
                   <img alt="The Epoch Times" src="https://www.theepochtimes.com/_next/static/media/logo.32553ed2.svg" />
                 </a>
               </header>
@@ -53,7 +53,7 @@
                   <div class="sidebar-nav__group">
                     <span class="sidebar-nav__group-title">Editions</span>
                     <button class="sidebar-nav__toggle" aria-label="Toggle Editions submenu">
-                      <i class="fa-solid fa-chevron-right"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
                     </button>
                   </div>
                   <div class="sidebar-nav__submenu">
@@ -92,7 +92,7 @@
                   <div class="sidebar-nav__group">
                     <a class="sidebar-nav__group-title" href="#">Arts &amp; Culture</a>
                     <button class="sidebar-nav__toggle" aria-label="Toggle Arts & Culture submenu">
-                      <i class="fa-solid fa-chevron-right"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
                     </button>
                   </div>
                   <div class="sidebar-nav__submenu">
@@ -7461,23 +7461,57 @@
         const menuItemsWithSubmenu = document.querySelectorAll('.sidebar-nav__item--has-submenu');
 
         menuItemsWithSubmenu.forEach((item) => {
-          const submenu = item.querySelector('.sidebar-nav__submenu');
-          if (!submenu) return;
-
-          // Khi di chuột vào
+          // ---- LOGIC CHO DESKTOP (HOVER) ----
           item.addEventListener('mouseenter', function () {
-            // Lấy thông tin vị trí và kích thước của mục cha (li)
-            const rect = item.getBoundingClientRect();
+            if (window.innerWidth > 1024) {
+              const submenu = item.querySelector('.sidebar-nav__submenu');
+              if (!submenu) return;
 
-            // Tính toán vị trí cho menu con
-            const topPosition = rect.top; // Cùng vị trí top với mục cha
-            const leftPosition = rect.right; // Ngay bên phải của mục cha
+              const rect = item.getBoundingClientRect();
+              const topPosition = rect.top;
+              const leftPosition = rect.right;
 
-            // Áp dụng vị trí cho menu con
-            submenu.style.top = `${topPosition}px`;
-            submenu.style.left = `${leftPosition}px`;
+              submenu.style.top = `${topPosition}px`;
+              submenu.style.left = `${leftPosition}px`;
+            }
           });
+
+          // ---- LOGIC CHO MOBILE (CLICK) ----
+          const group = item.querySelector('.sidebar-nav__group');
+          if (group) {
+            group.addEventListener('click', function (event) {
+              // Chỉ chạy trên màn hình nhỏ
+              if (window.innerWidth <= 1024) {
+                event.preventDefault(); // Ngăn hành động mặc định của thẻ <a>
+                item.classList.toggle('submenu-open');
+              }
+            });
+          }
         });
+
+        // Mở/Đóng toàn bộ sidebar
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const sidebarNav = document.getElementById('sidebar-nav');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        function openSidebar() {
+          sidebarNav.classList.add('sidebar-nav--open');
+        }
+
+        function closeSidebar() {
+          sidebarNav.classList.remove('sidebar-nav--open');
+        }
+
+        if (openMenuBtn && sidebarNav) {
+          openMenuBtn.addEventListener('click', openSidebar);
+        }
+        if (closeMenuBtn && sidebarNav) {
+          closeMenuBtn.addEventListener('click', closeSidebar);
+        }
+        if (sidebarOverlay && sidebarNav) {
+          sidebarOverlay.addEventListener('click', closeSidebar);
+        }
       });
 
       // SEARCH

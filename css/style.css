@@ -184,6 +184,7 @@ svg {
 }
 
 .sidebar-nav__list {
+  font-family: sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -213,9 +214,10 @@ svg {
 }
 
 .sidebar-nav__group-title {
+  font-family: sans-serif;
   text-decoration: none;
   color: inherit;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 .sidebar-nav__toggle {
@@ -289,14 +291,13 @@ svg {
 
 .sidebar-nav__submenu-link {
   display: block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: #2f2f2f;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 600;
   white-space: nowrap;
   /* Ngăn chữ bị xuống dòng */
-  border-bottom: 1px solid #f0f0f0;
 }
 
 .sidebar-nav__submenu-link:last-child {
@@ -3283,6 +3284,48 @@ aside.page__sidebar {
     display: none;
   }
 
+  /* Sidebar */
+  .sidebar-nav__submenu {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    padding-left: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* Trạng thái KHI MỞ trên mobile */
+  .sidebar-nav__item--has-submenu.submenu-open > .sidebar-nav__submenu {
+    max-height: max-content; 
+  }
+
+  .sidebar-nav__submenu-link {
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+  }
+
+  /* Xoay icon chevron khi menu mở */
+  .sidebar-nav__item--has-submenu.submenu-open .sidebar-nav__toggle i {
+    transform: rotate(180deg);
+  }
+
+  .sidebar-nav__panel {
+    width: -webkit-fill-available;
+    max-width: none;
+  }
+
+  .sidebar-nav__list {
+    overscroll-behavior: contain;
+    padding-bottom: 150px;
+  }
+
+  .sidebar-nav__footer-item .sidebar-nav__footer-link {
+    font-weight: 600;
+  }
+
   .nav-bar .overflow-hidden {
     display: block;
   }
@@ -3813,17 +3856,17 @@ aside.page__sidebar {
 
   .site-footer .site-footer__action-button {
     font-size: 0.9rem;
-        height: 28px;
+    height: 28px;
   }
 
   .site-footer__header {
     justify-content: center;
   }
-  .site-footer__main-nav{
-    margin-top: .5rem
+  .site-footer__main-nav {
+    margin-top: 0.5rem;
   }
 
-  .site-footer__main-nav .site-footer__main-nav-item{
+  .site-footer__main-nav .site-footer__main-nav-item {
     font-size: 1.05rem;
   }
 
@@ -3876,7 +3919,7 @@ aside.page__sidebar {
     align-items: center;
 
     background-color: white;
-    padding: 2px 0;
-    z-index: 9999;
+    padding-top: 3px;
+    z-index: 99;
   }
 }
